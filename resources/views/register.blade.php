@@ -22,15 +22,20 @@
                                 <div class="form-row form-row-wide">
                                     <label>Username:
 {{--                                        <i class="im im-icon-Male"></i>--}}
-                                        <input name="name">
+                                        <input name="name" >
                                     </label>
-
+                                    @error('name')
+                                    <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
 
                                 <div class="form-row form-row-wide">
                                     <label>Email Address:
 {{--                                        <i class="im im-icon-Mail"></i>--}}
                                         <input name="email" class="form-control" type="text"> </label>
+                                    @error('email')
+                                    <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
 
                                 <div class="form-row form-row-wide">
@@ -39,7 +44,9 @@
                                         <input class="form-control"
                                                name="password"/>
                                     </label>
-
+                                    @error('password')
+                                    <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
 
                                 <label>Repeat Password:
