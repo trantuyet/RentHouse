@@ -266,7 +266,7 @@
                 <div class="right-side">
                     <!-- Header Widget -->
                     <div class="header-widget">
-                        <a href="{{route('login')}}" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a>
+                        <a href="" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a>
                         <a href="submit-property.html" class="button border">Submit Property</a>
                     </div>
                     <!-- Header Widget / End -->
