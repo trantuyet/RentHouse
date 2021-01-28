@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
 
     <!-- Basic Page Needs
@@ -86,7 +85,6 @@
 
 
     <!-- Header Container
-    ================================================== -->
     <header id="header-container">
 
         <!-- Topbar -->
@@ -278,6 +276,8 @@
         <!-- Header / End -->
 
     </header>
+
+
 @extends('master')
 @section('content')
     <div class="clearfix"></div>

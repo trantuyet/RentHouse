@@ -126,8 +126,12 @@
         <div class="right-side">
             <!-- Header Widget -->
             <div class="header-widget">
-                <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a>
-                <a href="submit-property.html" class="button border">Submit Property</a>
+                @if(!\Illuminate\Support\Facades\Session::has('login'))
+                <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                <a href="{{route('login')}}" class="sign-in"><i class="fa fa-user"></i> Login</a>
+                @else
+                    <a href="{{route('logout')}}" class="sign-in">Logout</a>
+                @endif
             </div>
             <!-- Header Widget / End -->
         </div>
