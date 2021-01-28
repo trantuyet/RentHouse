@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HouseController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,9 @@ Route::get('/', function () {
 });
 
 Route::get('show-infor', [HouseController::class, 'showInfor']);
+Route::get('/register', [AuthController::class,'showFormRes'])->name('showFormRes');
+Route::post('/register', [AuthController::class,'register'])->name('register');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
