@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,16 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/login', [AuthController::class,'showFormLogin'] )->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('login.submit');
-Route::get('', function (){
-    return view('dashboard');
-});
+Route::get('/register', [AuthController::class,'showFormRes'])->name('showFormRes');
+Route::post('/register', [AuthController::class,'register'])->name('register');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
-//Route::get('admincp/login', ['as' => 'getLogin', 'uses' => 'Admin\AdminLoginController@getLogin']);
-//Route::post('admincp/login', ['as' => 'postLogin', 'uses' => 'Admin\AdminLoginController@postLogin']);
-//Route::get('admincp/logout', ['as' => 'getLogout', 'uses' => 'Admin\AdminLoginController@getLogout']);
-//
-//Route::group(['middleware' => 'checkAdminLogin', 'prefix' => 'admincp', 'namespace' => 'Admin'], function() {
-//    Route::get('/', function() {
-//        return view('admin.home');
-//    });
-//});
