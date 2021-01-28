@@ -9,8 +9,8 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/color.css')}}">
 
 </head>
 
@@ -633,12 +633,13 @@
                     <!-- Booking Widget -->
                     <div class="widget">
                         <div id="booking-widget-anchor" class="boxed-widget booking-widget margin-top-35">
-                            <h3><i class="fa fa-calendar-check-o"></i> Schedule a Tour</h3>
+                            <h3><i class="fa fa-calendar-check-o"></i>Thuê Nhà</h3>
                             <div class="row with-forms  margin-top-0">
 
                                 <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
                                 <div class="col-lg-12">
-                                    <input type="text" id="date-picker" placeholder="Date" readonly="readonly">
+                                    <p>Thời gian thuê</p>
+                                    <input type="text" id="date-picker" placeholder="" readonly="readonly">
                                 </div>
 
                                 <!-- Panel Dropdown -->
@@ -965,50 +966,45 @@
 
     <!-- Scripts
     ================================================== -->
-    <script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery-migrate-3.1.0.min.js"></script>
-    <script type="text/javascript" src="scripts/chosen.min.js"></script>
-    <script type="text/javascript" src="scripts/magnific-popup.min.js"></script>
-    <script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="scripts/rangeSlider.js"></script>
-    <script type="text/javascript" src="scripts/sticky-kit.min.js"></script>
-    <script type="text/javascript" src="scripts/slick.min.js"></script>
-    <script type="text/javascript" src="scripts/mmenu.min.js"></script>
-    <script type="text/javascript" src="scripts/tooltips.min.js"></script>
-    <script type="text/javascript" src="scripts/masonry.min.js"></script>
-    <script type="text/javascript" src="scripts/custom.js"></script>
-
-    <!-- Maps -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script type="text/javascript" src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery-migrate-3.1.0.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/chosen.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/magnific-popup.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/rangeSlider.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/sticky-kit.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/slick.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/masonry.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/mmenu.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/tooltips.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-    <script type="text/javascript" src="scripts/infobox.min.js"></script>
-    <script type="text/javascript" src="scripts/markerclusterer.js"></script>
-    <script type="text/javascript" src="scripts/maps.js"></script>
-
-    <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
-    <script src="scripts/moment.min.js"></script>
-    <script src="scripts/daterangepicker.js"></script>
+    <script type="text/javascript" src="{{asset('js/infobox.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/markerclusterer.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/maps.js')}}"></script>
+    <script src="{{asset('js/moment.min.js')}}"></script>
+    <script src="{{asset('js/daterangepicker.js')}}"></script>
     <script>
         // Calendar Init
         $(function() {
             $('#date-picker').daterangepicker({
                 "opens": "left",
-                singleDatePicker: true,
-
+                timePicker: true,
+                startDate: moment().startOf('hour'),
+                endDate: moment().startOf('hour').add(900, 'hour'),
                 // Disabling Date Ranges
                 isInvalidDate: function(date) {
                     // Disabling Date Range
-                    var disabled_start = moment('09/02/2018', 'MM/DD/YYYY');
-                    var disabled_end = moment('09/06/2018', 'MM/DD/YYYY');
+                    var disabled_start = moment('28/01/2021', 'MM/DD/YYYY');
+                    var disabled_end = moment('09/06/2022', 'MM/DD/YYYY');
                     return date.isAfter(disabled_start) && date.isBefore(disabled_end);
-
-                    // Disabling Single Day
-                    // if (date.format('MM/DD/YYYY') == '08/08/2018') {
-                    //     return true;
-                    // }
                 }
             });
         });
-
         // Calendar animation
         $('#date-picker').on('showCalendar.daterangepicker', function(ev, picker) {
             $('.daterangepicker').addClass('calendar-animated');
@@ -1022,7 +1018,6 @@
             $('.daterangepicker').addClass('calendar-hidden');
         });
     </script>
-
 
     <!-- Replacing dropdown placeholder with selected time slot -->
     <script>

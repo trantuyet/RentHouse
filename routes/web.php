@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 Route::get('/listhouse', function () {
     return view('propertyHouse');
+});Route::get('/login', function () {
+    return view('login');
 });
