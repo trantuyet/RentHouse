@@ -81,7 +81,7 @@
                                     <li><a href="my-profile.html">My Profile</a></li>
                                     <li><a href="my-bookmarks.html">Bookmarked Listings</a></li>
                                     <li><a href="my-properties.html">My Properties</a></li>
-                                    <li><a href="change-password.html">Change Password</a></li>
+                                    <li><a href="{{route('changePassword')}}">Change Password</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Agencies & Agents</a>
@@ -130,7 +130,15 @@
                 <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Register</a>
                 <a href="{{route('login')}}" class="sign-in"><i class="fa fa-user"></i> Login</a>
                 @else
-                    <a href="{{route('logout')}}" class="sign-in">Logout</a>
+                    <div class="user-menu">
+                        <div class="user-name"><span><img src="images/agent-03.jpg" alt="">{{auth()->user()->name}}</span></div>
+                        <ul>
+                            <li><a href="my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
+                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
+                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
+                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i> Log Out</a></li>
+                        </ul>
+                    </div>
                 @endif
             </div>
             <!-- Header Widget / End -->
