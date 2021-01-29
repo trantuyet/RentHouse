@@ -19,14 +19,14 @@
                                     <label>Email:
                                         <i class="im im-icon-Male"></i>
                                         <input name="email" value="{{old('email')}}" class="form-control" type="text"
-                                               placeholder="Nhập email">
+                                               >
                                         @error('email')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
                                     </label>
                                 </div>
                                 <div>
-                                    <label for="password">Password:
+                                    <label for="password">Mật khẩu :
                                         <i class="im im-icon-Lock-2"></i>
                                         <input class="input-text" value="{{old('password')}}" type="password" name="password" placeholder="Nhập password" />
                                         @error('password')
@@ -38,7 +38,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="button border fw margin-top-10">Sign in</button>
+                                    <button type="submit" class="button border fw margin-top-10">Đăng kí</button>
                                 </div>
                             </form>
                         </div>
