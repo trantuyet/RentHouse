@@ -24,11 +24,7 @@
             <nav id="navigation" class="style-1">
                 <ul id="responsive">
 
-                    <li><a class="current" href="#">Home</a>
-                        <ul>
-                            <li><a href="">Home 1</a></li>
-
-                        </ul>
+                    <li><a class="current" href="{{route('home')}}">Home</a>
                     </li>
 
                     <li><a href="#">Listings</a>
@@ -127,12 +123,12 @@
                 <a href="{{route('login')}}" class="sign-in"><i class="fa fa-user"></i> Login</a>
                 @else
                     <div class="user-menu">
-                        <div class="user-name"><span><img src="images/agent-03.jpg" alt="">{{auth()->user()->name}}</span></div>
+                        <div class="user-name"><span><img src="{{asset(\Illuminate\Support\Facades\Auth::user()->image)}}" alt="">{{auth()->user()->name}}</span></div>
                         <ul>
-                            <li><a href="my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
-                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
+                            <li><a href="{{route('my-profile')}}"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
+                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã cho thuê</a></li>
                             <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
-                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i> Log Out</a></li>
+                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i>Dăng xuất</a></li>
                         </ul>
                     </div>
                 @endif
