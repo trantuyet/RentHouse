@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -34,7 +35,7 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-    function register(Request $request)
+    function register(RegisterRequest $request): \Illuminate\Http\RedirectResponse
     {
         $user = new User();
         $user->name = $request->name;
