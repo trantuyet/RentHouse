@@ -24,11 +24,8 @@
             <nav id="navigation" class="style-1">
                 <ul id="responsive">
 
-                    <li><a class="current" href="#">Home</a>
-                        <ul>
-                            <li><a href="">Home 1</a></li>
+                    <li><a class="current" href="{{route('home')}}">Trang Chủ</a>
 
-                        </ul>
                     </li>
 
                     <li><a href="#">Listings</a>
@@ -63,15 +60,11 @@
                             <li><a href="#">Single Properties</a>
                                 <ul>
                                     <li><a href="single-property-page-1.html">Property Style 1</a></li>
-                                    <li><a href="single-property-page-2.html">Property Style 2</a></li>
-                                    <li><a href="single-property-page-3.html">Property Style 3</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Search Styles</a>
                                 <ul>
                                     <li><a href="index.html">Home Search 1</a></li>
-                                    <li><a href="index-2.html">Home Search 2</a></li>
-                                    <li><a href="index-3.html">Home Search 3</a></li>
                                     <li><a href="listings-list-full-width.html">Advanced Style</a></li>
                                     <li><a href="listings-list-with-sidebar.html">Sidebar Search</a></li>
                                 </ul>
@@ -81,7 +74,7 @@
                                     <li><a href="my-profile.html">My Profile</a></li>
                                     <li><a href="my-bookmarks.html">Bookmarked Listings</a></li>
                                     <li><a href="my-properties.html">My Properties</a></li>
-                                    <li><a href="change-password.html">Change Password</a></li>
+                                    <li><a href="{{route('changePassword')}}">Change Password</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Agencies & Agents</a>
@@ -126,8 +119,20 @@
         <div class="right-side">
             <!-- Header Widget -->
             <div class="header-widget">
-                <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Log In / Register</a>
-                <a href="submit-property.html" class="button border">Submit Property</a>
+                @if(!\Illuminate\Support\Facades\Session::has('login'))
+                <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                <a href="{{route('login')}}" class="sign-in"><i class="fa fa-user"></i> Login</a>
+                @else
+                    <div class="user-menu">
+                        <div class="user-name"><span><img src="{{asset(\Illuminate\Support\Facades\Auth::user()->image)}}" alt="">{{auth()->user()->name}}</span></div>
+                        <ul>
+                            <li><a href="{{route('my-profile')}}"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
+                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã cho thuê</a></li>
+                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
+                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i>Dăng xuất</a></li>
+                        </ul>
+                    </div>
+                @endif
             </div>
             <!-- Header Widget / End -->
         </div>

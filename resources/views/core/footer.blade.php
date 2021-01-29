@@ -37,12 +37,7 @@
                     E-Mail:<span> <a href="#">office@example.com</a> </span><br>
                 </div>
 
-                <ul class="social-icons margin-top-20">
-                    <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-                    <li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
-                </ul>
+
 
             </div>
 

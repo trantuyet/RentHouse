@@ -278,6 +278,7 @@
         <!-- Header / End -->
 
     </header>
+
 @extends('master')
 @section('content')
     <div class="clearfix"></div>
