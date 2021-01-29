@@ -52,8 +52,8 @@
                                 <label>Repeat Password:
                                     <i class="im im-icon-Lock-2"></i>
                                     <input
-                                        type="password" id="name"
-                                        name="newPassAgain"
+                                        type="password" id="password-confirm"
+                                        name="password-confirm"
                                     />
                                     <a href=""></a>
                                 </label>
