@@ -38,17 +38,26 @@
                 <div class="row">
                     <div class="col-md-6  my-profile">
                         <h4 class="margin-top-0 margin-bottom-30">Change Password</h4>
-                        <form action="{{route('updatePassword')}}" >
+                        <form action="{{route('updatePassword')}}" method="post">
                             @csrf
                             <label>Current Password</label>
-                            <input name="current-password" class="form-control" type="password">
-
+                            <input id="current-password" name="current-password" value="{{old('current-password')}}"
+                                   class="form-control" type="password">
+                            @error('current-password')
+                            <p class="text-danger">{{$message}}</p>
+                            @enderror
                             <label>New Password</label>
-                            <input name="new-password" class="form-control" type="password">
-
+                            <input id="new-password" name="new-password" value="{{old('new-password')}}"
+                                   class="form-control" type="password">
+                            @error('new-password')
+                            <p class="text-danger">{{$message}}</p>
+                            @enderror
                             <label>Confirm New Password</label>
-                            <input name="newPassAgain" class="form-control" type="password">
-
+                            <input id="new-password-confirm" value="{{old('new-password-confirm')}}"
+                                   name="new-password-confirm" class="form-control" type="password">
+                            @error('new-password-confirm')
+                            <p class="text-danger">{{$message}}</p>
+                            @enderror
                             <button class="margin-top-20 button">Save Changes</button>
 
 
@@ -58,5 +67,5 @@
 
             </div>
         </div>
-
+    </div>
 @endsection

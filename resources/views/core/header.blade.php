@@ -24,11 +24,8 @@
             <nav id="navigation" class="style-1">
                 <ul id="responsive">
 
-                    <li><a class="current" href="#">Home</a>
-                        <ul>
-                            <li><a href="">Home 1</a></li>
+                    <li><a class="current" href="{{route('home')}}">Trang Chủ</a>
 
-                        </ul>
                     </li>
 
                     <li><a href="#">Listings</a>

@@ -21,7 +21,7 @@
                                 @csrf
                                 <div class="form-row form-row-wide">
                                     <label>Username:
-{{--                                        <i class="im im-icon-Male"></i>--}}
+                                        <i class="im im-icon-Male"></i>
                                         <input name="name" value="{{old('name')}}" >
                                     </label>
                                     @error('name')
@@ -31,7 +31,7 @@
 
                                 <div class="form-row form-row-wide">
                                     <label>Email Address:
-{{--                                        <i class="im im-icon-Mail"></i>--}}
+                                        <i class="im im-icon-Mail"></i>
                                         <input name="email" class="form-control" value="{{old('email')}}" type="text"> </label>
                                     @error('email')
                                     <p class="text-danger">{{$message}}</p>
@@ -40,7 +40,7 @@
 
                                 <div class="form-row form-row-wide">
                                     <label>Password:
-{{--                                        <i class="im im-icon-Lock-2"></i>--}}
+                                        <i class="im im-icon-Lock-2"></i>
                                         <input class="form-control" value="{{old('password')}}"
                                                name="password"/>
                                     </label>
