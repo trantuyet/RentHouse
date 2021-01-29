@@ -21,6 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('show-infor', [HouseController::class, 'showInfor']);
+Route::get('add-house', [HouseController::class, 'formAddHouse']);
 Route::get('/register', [AuthController::class,'showFormRes'])->name('showFormRes');
 Route::post('/register', [AuthController::class,'register'])->name('register');
 

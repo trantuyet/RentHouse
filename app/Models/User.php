@@ -20,6 +20,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'phone',
+        'address',
+        'role',
+        'avatar',
     ];
 
     /**
@@ -40,4 +44,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function houses() {
+        return $this->hasMany('\App\Models\House','user_id','id');
+    }
+
+    public function bills() {
+        return $this->hasMany('\App\Models\Bill', 'user_id', 'id');
+    }
 }
