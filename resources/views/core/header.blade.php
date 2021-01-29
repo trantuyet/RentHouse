@@ -63,15 +63,11 @@
                             <li><a href="#">Single Properties</a>
                                 <ul>
                                     <li><a href="single-property-page-1.html">Property Style 1</a></li>
-                                    <li><a href="single-property-page-2.html">Property Style 2</a></li>
-                                    <li><a href="single-property-page-3.html">Property Style 3</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Search Styles</a>
                                 <ul>
                                     <li><a href="index.html">Home Search 1</a></li>
-                                    <li><a href="index-2.html">Home Search 2</a></li>
-                                    <li><a href="index-3.html">Home Search 3</a></li>
                                     <li><a href="listings-list-full-width.html">Advanced Style</a></li>
                                     <li><a href="listings-list-with-sidebar.html">Sidebar Search</a></li>
                                 </ul>

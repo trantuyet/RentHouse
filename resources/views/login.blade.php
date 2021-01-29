@@ -28,7 +28,7 @@
                                 <div>
                                     <label for="password">Password:
                                         <i class="im im-icon-Lock-2"></i>
-                                        <input class="input-text" value="{{old('password')}}" type="password" name="password" id="password" placeholder="Nhập password" />
+                                        <input class="input-text" value="{{old('password')}}" type="password" name="password" placeholder="Nhập password" />
                                         @error('password')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
