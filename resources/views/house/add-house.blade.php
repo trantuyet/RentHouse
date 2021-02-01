@@ -83,14 +83,12 @@
                                                             cols="30" rows="10">
               </textarea>
                         </div>
-{{--                        <div class="form-group">--}}
-{{--                            <div class="change-photo-btn">--}}
-{{--                                <div class="photoUpload">--}}
-{{--                                    <span><i class="fa fa-upload"></i>Đăng ảnh nhà</span>--}}
-{{--                                    <input type="file" accept="image/*" class="form-control">--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="form-group">
+                            <label for="comment">Thêm hình ảnh:</label>
+                            <div class="file-loading">
+                                <input id="file-5" type="file" class="file" name="ph[]" multiple data-preview-file-type="any" data-upload-url="#">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">

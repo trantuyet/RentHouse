@@ -24,6 +24,23 @@ class HouseController extends Controller
      */
     public function formAddHouse(Request $request): \Illuminate\Http\RedirectResponse
     {
+        if ($request->hasFile('photo')){
+            $arr_images = array();
+            $inputfile =  $request->file('photo');
+            foreach ($inputfile as $filephoto) {
+                $namefile = "house-".str_random(5)."-".$filephoto->getClientOriginalName();
+                while (file_exists('uploads/images'.$namefile)) {
+                    $namefile = "house-".str_random(5)."-".$filephoto->getClientOriginalName();
+                }
+                $arr_images[] = $namefile;
+                $filephoto->move('uploads/images',$namefile);
+            }
+            $json_img =  json_encode($arr_images,JSON_FORCE_OBJECT);
+        }
+        else {
+            $arr_images[] = "no_img_room.png";
+            $json_img = json_encode($arr_images,JSON_FORCE_OBJECT);
+        }
         $house = new House();
         $house->name = $request->name;
         $house->price = $request->price;

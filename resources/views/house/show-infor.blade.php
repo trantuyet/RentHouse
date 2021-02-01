@@ -552,18 +552,18 @@
                     <!-- Booking Widget -->
                     <div class="widget">
                         <div id="booking-widget-anchor" class="boxed-widget booking-widget margin-top-35">
-                            <h3><i class="fa fa-calendar-check-o"></i> Schedule a Tour</h3>
+                            <h3><i class="fa fa-calendar-check-o"></i> Thuê nhà </h3>
                             <div class="row with-forms  margin-top-0">
 
                                 <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
                                 <div class="col-lg-12">
-                                    <input type="text" id="date-picker" placeholder="Date" readonly="readonly">
+                                    <input type="text" id="date-picker" placeholder="Thời gian th" readonly="readonly">
                                 </div>
 
                                 <!-- Panel Dropdown -->
                                 <div class="col-lg-12">
                                     <div class="panel-dropdown time-slots-dropdown">
-                                        <a href="#">Time</a>
+                                        <a href="#">Giờ vào thuê </a>
                                         <div class="panel-dropdown-content padding-reset">
                                             <div class="panel-dropdown-scrollable">
 
