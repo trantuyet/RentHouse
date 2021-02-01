@@ -36,19 +36,6 @@
 
             <div class="csm-properties">
 
-                <!-- Property -->
-                <div class="listing-item compact">
-                    <a href="single-property-page-2.html" class="listing-img-container">
-                        <div class="remove-from-compare"><i class="fa fa-close"></i></div>
-                        <div class="listing-badges">
-                            <span>For Sale</span>
-                        </div>
-                        <div class="listing-img-content">
-                            <span class="listing-compact-title">Eagle Apartments <i>$420,000</i></span>
-                        </div>
-                        <img src="{{asset('images/listing-01.jpg')}}" alt="">
-                    </a>
-                </div>
 
                 <!-- Property -->
                 <div class="listing-item compact">
