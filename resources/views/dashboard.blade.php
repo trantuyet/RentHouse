@@ -16,7 +16,7 @@
 
                         <!-- Main Search Container -->
                         <div class="main-search-container">
-                            <h2>Find Your Dream Home</h2>
+                            <h2>Tìm ngôi nhà mơ ước của bạn</h2>
 
                             <!-- Main Search -->
                             <form class="main-search-form">

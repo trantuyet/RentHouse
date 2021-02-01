@@ -12,7 +12,7 @@
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Manage Account</li>
-                            <li><a href="my-profile.html"><i class="sl sl-icon-user"></i> My Profile</a></li>
+                            <li><a href="my-profile.html"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
                             <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarked Listings</a></li>
                         </ul>
 

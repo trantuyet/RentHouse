@@ -41,7 +41,9 @@ class AuthController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
+        $user->image = 'upload/default.png';
         $user->save();
+
         return redirect()->route('login');
 
     }
@@ -55,7 +57,7 @@ class AuthController extends Controller
     {
         Auth::logout();
         Session::flush();
-        return redirect()->route('login');
+        return redirect()->route('home');
     }
 
 }

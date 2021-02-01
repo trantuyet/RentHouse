@@ -9,4 +9,11 @@ class HomeController extends Controller
     function index() {
         return view('dashboard');
     }
+
+
+
+
+    function edit(){
+
+    }
 }

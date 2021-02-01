@@ -22,7 +22,7 @@
                                 <div class="form-row form-row-wide">
                                     <label>Username:
                                         <i class="im im-icon-Male"></i>
-                                        <input name="name" value="{{old('name')}}" >
+                                        <input name="name" value="{{old('name')}}">
                                     </label>
                                     @error('name')
                                     <p class="text-danger">{{$message }}</p>
@@ -32,7 +32,8 @@
                                 <div class="form-row form-row-wide">
                                     <label>Email Address:
                                         <i class="im im-icon-Mail"></i>
-                                        <input name="email" class="form-control" value="{{old('email')}}" type="text"> </label>
+                                        <input name="email" class="form-control" value="{{old('email')}}" type="text">
+                                    </label>
                                     @error('email')
                                     <p class="text-danger">{{$message}}</p>
                                     @enderror
@@ -42,7 +43,7 @@
                                     <label>Password:
                                         <i class="im im-icon-Lock-2"></i>
                                         <input class="form-control" value="{{old('password')}}"
-                                               name="password"/>
+                                              type="password" name="password"/>
                                     </label>
                                     @error('password')
                                     <p class="text-danger">{{ $message}}</p>
@@ -57,6 +58,7 @@
                                     />
                                     <a href=""></a>
                                 </label>
+
                                 <div class="form-row">
                                     <button type="submit" class="button border fw margin-top-10">Đăng kí</button>
                                 </div>

@@ -13,6 +13,7 @@
                     <div class="tabs-container alt">
                         <!-- Login -->
                         <div class="tab-content" id="tab1">
+
                             <form method="post" action="{{route('login.submit')}}" class="login">
                                 @csrf
                                 <div>
@@ -29,6 +30,7 @@
                                     <label for="password">Mật khẩu :
                                         <i class="im im-icon-Lock-2"></i>
                                         <input class="input-text" value="{{old('password')}}" type="password" name="password" id="password"  />
+
                                         @error('password')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
@@ -38,7 +40,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <button type="submit" class="button border fw margin-top-10">Đăng kí</button>
+                                    <button type="submit" class="button border fw margin-top-10">Đăng nhập</button>
                                 </div>
                             </form>
                         </div>
@@ -47,4 +49,5 @@
             </div>
         </div>
     </div>
+
 @endsection

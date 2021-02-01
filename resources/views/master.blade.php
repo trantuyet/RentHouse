@@ -12,9 +12,8 @@
     ================================================== -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/color.css')}}">
-    <link rel="stylesheet" href="{{asset('css/icon.css')}}">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -122,6 +121,7 @@
 
     <!-- Scripts
     ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery-migrate-3.1.0.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/chosen.min.js')}}"></script>
@@ -134,6 +134,7 @@
     <script type="text/javascript" src="{{asset('js/mmenu.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/tooltips.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
     <!-- Google Autocomplete -->
     <script>
         function initAutocomplete() {
