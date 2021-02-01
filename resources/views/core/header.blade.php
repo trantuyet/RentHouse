@@ -8,9 +8,9 @@
             </div>
             <div class="mmenu-trigger">
                 <button class="hamburger hamburger--collapse" type="button">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
+                  <span class="hamburger-box">
+                     <span class="hamburger-inner"></span>
+                  </span>
                 </button>
             </div>
             <nav id="navigation" class="style-1">
@@ -40,12 +40,14 @@
                     <div class="user-menu">
                         <div class="user-name"><span><img src="{{asset(\Illuminate\Support\Facades\Auth::user()->image)}}" alt="">{{auth()->user()->name}}</span>
                         </div>
-                        <ul>
-                            <li><a href="{{route('myProfile')}}"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
-                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã cho thuê</a></li>
-                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
-                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i>Dăng xuất</a></li>
+                        <ul>avatar
+                            <li><a href="{{route('myProfile')}}"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a>
                             </li>
+                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã cho
+                                    thuê</a></li>
+                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> Danh sách bạn đã đăng</a>
+                            </li>
+                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i>Đăng xuất</a></li>
                         </ul>
                     </div>
                 @endif
