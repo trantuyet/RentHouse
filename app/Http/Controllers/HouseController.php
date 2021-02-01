@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\House;
 use App\Models\Image;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\AddHouseRequest;
 use Illuminate\Support\Facades\Session;
@@ -15,25 +14,56 @@ class HouseController extends Controller
 
     public function index()
     {
-        return view('dashboard');    }
+        return view('house.add-house');
+    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function create(AddHouseRequest $request)
+    public function formAddHouse(Request $request): \Illuminate\Http\RedirectResponse
     {
         $house = new House();
         $house->name = $request->name;
         $house->price = $request->price;
         $house->address = $request->address;
-        $house->typeOfRoom = $request->typeOfRoom;
-        $house->bedRoom = $request->bedRoom;
-        $house->bathRoom = $request->bathRoom;
+        $house->typeRoom = $request->typeRoom;
+        $house->bedroom = $request->bedroom;
+        $house->bathroom = $request->bathroom;
         $house->user_id = $request->user_id;
-        $house->desc = $request->desc;
-        return redirect()->route('house.show-infor');
+        $house->description = $request->description;
+        $house -> save();
+        return redirect()->route('home');
+//
+//        if ($request->hasFile('photos')) {
+//            $allowedfileExtension = ['jpg', 'png', 'jpeg'];
+//            $files = $request->file('photos');
+//            $exe_flg = true;
+//            foreach ($files as $file) {
+//                $extension = $file->getClientOriginalExtension();
+//                $check = in_array($extension, $allowedfileExtension);
+//                if (!$check) {
+//                    $exe_flg = false;
+//                    break;
+//                }
+//            }
+//            if ($exe_flg) {
+//                $house->save();
+//                foreach ($request->photos as $photo) {
+//                    $filename = $photo->store('images', 'public');
+//                    $image = new Image();
+//                    $image->image = $filename;
+//                    $image->house_id = $house->id;
+//                    $image->save();
+//                }
+//                return redirect()->route('home');
+//            } else {
+//
+//                return redirect()->route('listHouse');
+//            }
+
+//        }
 
     }
 

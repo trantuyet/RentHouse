@@ -88,6 +88,7 @@
     <header id="header-container">
 
         <!-- Topbar -->
+
         <div id="top-bar">
             <div class="container">
 
@@ -275,8 +276,8 @@
         </div>
         <!-- Header / End -->
 
-    </header>
-
+</div>
+</body>
 
 @extends('master')
 @section('content')

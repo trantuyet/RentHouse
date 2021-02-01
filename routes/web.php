@@ -16,15 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+
 
 Route::get('show-infor', [HouseController::class, 'showInfor']);
-Route::get('list-house', [HouseController::class, 'listHouse']);
-Route::get('list-house', [HouseController::class, 'listHouse']);
+Route::get('list-house', [HouseController::class, 'listHouse']) ->name('listHouse');
+Route::get('/add-house', [HouseController::class, 'index']) ->name('house.showAddHouse') ->middleware('auth');
+Route::post('/add-house', [HouseController::class, 'formAddHouse']) ->name('house.addhouse') ->middleware('auth');
 Route::get('/login', [AuthController::class,'showFormLogin'] )->name('login');
 Route::post('/login',[AuthController::class,'login'])->name('login.submit');
+Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/register', [AuthController::class,'showFormRes'])->name('showFormRes');
 Route::post('/register', [AuthController::class,'register'])->name('register');
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
