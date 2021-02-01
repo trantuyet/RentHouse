@@ -19,7 +19,7 @@
                         <div class="form-group">
                             <label> Giá thuê </label>
                             <label>
-                                <input value="{{old('price')}}" type="text" name="price">
+                                <input value="{{old('pricePerDay')}}" type="text" name="pricePerDay">
                             </label>
                         </div>
                         <div class="form-group">
@@ -38,7 +38,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label> Số lượng phòng ngủ
-                                        <select class="chosen-select-no-single" name="bedroom">
+                                        <select class="chosen-select-no-single" name="numberOfBedroom">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -58,7 +58,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label> Số lượng phòng tắm
-                                        <select class="chosen-select-no-single" name="bathroom">
+                                        <select class="chosen-select-no-single" name="numberOfBathroom">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -79,14 +79,14 @@
                         </div>
                         <div class="form-group">
                             <label>Mô tả chung </label>
-                            <label for=""></label><textarea class="form-control" name="description" id=""
+                            <label for=""></label><textarea class="form-control" name="desc" id=""
                                                             cols="30" rows="10">
               </textarea>
                         </div>
                         <div class="form-group">
                             <label for="comment">Thêm hình ảnh:</label>
                             <div class="file-loading">
-                                <input id="file-5" type="file" class="file" name="ph[]" multiple data-preview-file-type="any" data-upload-url="#">
+                                <input id="file-5" type="file" class="file" name="photo[]" multiple data-preview-file-type="any" data-upload-url="#">
                             </div>
                         </div>
                     </div>

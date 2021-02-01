@@ -24,13 +24,14 @@ class HouseController extends Controller
      */
     public function formAddHouse(Request $request): \Illuminate\Http\RedirectResponse
     {
+
         if ($request->hasFile('photo')){
             $arr_images = array();
             $inputfile =  $request->file('photo');
             foreach ($inputfile as $filephoto) {
-                $namefile = "house-".str_random(5)."-".$filephoto->getClientOriginalName();
+                $namefile = "house-"."-".$filephoto->getClientOriginalName();
                 while (file_exists('uploads/images'.$namefile)) {
-                    $namefile = "house-".str_random(5)."-".$filephoto->getClientOriginalName();
+                    $namefile = "house-"."-".$filephoto->getClientOriginalName();
                 }
                 $arr_images[] = $namefile;
                 $filephoto->move('uploads/images',$namefile);
@@ -43,13 +44,13 @@ class HouseController extends Controller
         }
         $house = new House();
         $house->name = $request->name;
-        $house->price = $request->price;
+        $house->pricePerDay = $request->pricePerDay;
         $house->address = $request->address;
-        $house->typeRoom = $request->typeRoom;
-        $house->bedroom = $request->bedroom;
-        $house->bathroom = $request->bathroom;
+        $house->typeOfRoom = $request->typeOfRoom;
+        $house->numberOfBedroom = $request->numberOfBedroom;
+        $house->numberOfBathroom = $request->numberOfBathroom;
         $house->user_id = $request->user_id;
-        $house->description = $request->description;
+        $house->desc = $request->desc;
         $house -> save();
         return redirect()->route('home');
 //
