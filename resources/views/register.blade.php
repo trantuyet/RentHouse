@@ -41,8 +41,7 @@
                                 <div class="form-row form-row-wide">
                                     <label>Password:
                                         <i class="im im-icon-Lock-2"></i>
-                                        <input class="form-control" value="{{old('password')}}"
-                                               name="password"/>
+                                        <input class="form-control" value="{{old('password')}}" name="password" type="password"/>
                                     </label>
                                     @error('password')
                                     <p class="text-danger">{{ $message}}</p>
@@ -59,6 +58,7 @@
                                 </label>
                                 <div class="form-row">
                                     <button type="submit" class="button border fw margin-top-10">Đăng kí</button>
+                                    <button class="button border fw margin-top-10" onclick="window.history.go(-1); return false">Cancel</button>
                                 </div>
                             </form>
                         </div>

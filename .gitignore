@@ -11,8 +11,5 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-<<<<<<< HEAD
-=======
 /.idea
->>>>>>> bc06257e024189c46993e567ec065f5de1d48666
-.idea
+./composer.json
