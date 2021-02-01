@@ -27,6 +27,6 @@ class UserController extends Controller
 
         // dd($request->all());
         $user->save();
-        return redirect()->route('my-profile');
+        return redirect()->route('myProfile');
     }
 }
