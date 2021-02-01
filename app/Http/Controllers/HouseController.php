@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\House;
 use Illuminate\Http\Request;
-use App\Models\House;
 use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\AddHouseRequest;
@@ -158,6 +157,10 @@ class HouseController extends Controller
     public function showInfor() {
 //        $house = House::findOrFail($id);
         return view('house.show-infor');
+    }
+    public function listHouse() {
+        $houses = House::all();
+        return view('house.list-house', compact('houses'));
     }
 //, compact('house')
 }

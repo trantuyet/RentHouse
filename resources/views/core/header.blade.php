@@ -19,7 +19,7 @@
                         <a class="current" href="{{route('home')}}">Trang Chủ</a>
                     </li>
                     <li>
-                        <a href="#">Danh Sách Nhà</a>
+                        <a href="{{route('listHouse')}}">Danh Sách Nhà</a>
                     </li>
                     <li>
                         <a href="#">Features</a>
