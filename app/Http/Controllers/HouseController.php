@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\House;
 use Illuminate\Http\Request;
 use App\Models\House;
 use App\Models\Image;
@@ -154,8 +155,9 @@ class HouseController extends Controller
 //        return redirect()->route('house.show-infor', $request->house_id);
 //    }
 
-    function showInfor()
-    {
+    public function showInfor() {
+//        $house = House::findOrFail($id);
         return view('house.show-infor');
     }
+//, compact('house')
 }

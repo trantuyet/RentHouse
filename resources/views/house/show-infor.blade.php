@@ -1,3 +1,6 @@
+@extends('master')
+@section('content')
+
 <!DOCTYPE html>
 <head>
 
@@ -12,12 +15,10 @@
     <link rel="stylesheet" href="{{asset('css/color.css')}}">
 
 </head>
-
 <body>
 
 <!-- Wrapper -->
 <div id="wrapper">
-
 
     <!-- Compare Properties Widget
     ================================================== -->
@@ -210,7 +211,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
                     <a href="listings-list-with-sidebar.html" class="back-to-listings"></a>
                     <div class="property-title">
                         <h2>Selway Apartments <span class="property-badge">For Sale</span></h2>
@@ -962,3 +962,4 @@
 
 </body>
 </html>
+@endsection
