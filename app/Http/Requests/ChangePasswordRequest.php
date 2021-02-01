@@ -26,7 +26,7 @@ class ChangePasswordRequest extends FormRequest
         return [
             'current-password'=> "required | min:4",
             'new-password'=>"required |min:4",
-            'new-password-confirm'=>"required|min:4",
+            'new-password-confirm'=>"required|min:4|confirmed"
         ];
     }
     public function messages(): array
@@ -37,7 +37,6 @@ class ChangePasswordRequest extends FormRequest
             'new-password.required'=>'Mat khau nay khong duoc de trong',
             'new-password.min'=>'Mat kahu nay khong duoc ngan qua 4 ky tu',
             'new-password-confirm.required'=>'Mat khau nay khong duoc de trong',
-            'new-password-confirm'=>'Mat khau nay khong duoc ngan qua 4 ky tu',
             'new-password-confirm.min'=>'Mat khau nay khong duoc ngan qua 4 ky tu',
             'new-password-confirm.confirmed'=>'Mat khau khong khop',
         ];
