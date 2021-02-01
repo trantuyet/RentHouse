@@ -12,6 +12,8 @@
     ================================================== -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/color.css')}}">
+    <link rel="stylesheet" href="{{asset('css/icon.css')}}">
+
 
 </head>
 
