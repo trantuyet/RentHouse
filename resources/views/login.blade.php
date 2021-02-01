@@ -17,7 +17,7 @@
                                     <label>Email:
                                         <i class="im im-icon-Male"></i>
                                         <input name="email" value="{{old('email')}}" class="form-control" type="text"
-                                               >
+                                        >
                                         @error('email')
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror

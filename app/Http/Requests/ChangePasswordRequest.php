@@ -41,6 +41,4 @@ class ChangePasswordRequest extends FormRequest
             'new-password-confirm.confirmed'=>'Mat khau khong khop',
         ];
     }
-
-
 }
