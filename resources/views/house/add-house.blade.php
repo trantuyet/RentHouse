@@ -1,6 +1,5 @@
 @extends('master')
 @section('content')
-<<<<<<< HEAD
     <div class="container">
         <!--Tab -->
         <div class="my-account style-1 margin-top-5 margin-bottom-40">
@@ -102,8 +101,6 @@
                     </div>
                 </div>
             </form>
-=======
-
     <div class="container">
                 <!--Tab -->
                 <div class="my-account style-1 margin-top-5 margin-bottom-40">
@@ -211,7 +208,6 @@
                     </form>
                 </div>
             </div>
->>>>>>> bc06257e024189c46993e567ec065f5de1d48666
         </div>
     </div>
 @endsection
