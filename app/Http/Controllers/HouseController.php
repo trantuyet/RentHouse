@@ -18,5 +18,8 @@ class HouseController extends Controller
 //        $house = House::findOrFail($id);
         return view('house.show-infor');
     }
+    public function listHouse() {
+        return view('house.list-house');
+    }
 //, compact('house')
 }
