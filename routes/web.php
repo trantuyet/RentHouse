@@ -30,3 +30,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::get('/changePassword',[ChangePasswordController::class,'changePassword'])->name('changePassword');
 Route::post('/changePassword',[ChangePasswordController::class,'updatePassword'])->name('updatePassword');
+Route::get('/my-profile',[\App\Http\Controllers\UserController::class,'showProfile'])->name('my-profile');
+Route::post('/my-profile', [\App\Http\Controllers\UserController::class,'updateProfile'])->name('profile.update');
