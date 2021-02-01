@@ -3,8 +3,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <button class="button social-login via-gplus"><i class="fa fa-google-plus"></i> Đăng nhập bằng Google
-                </button>
                 <!--Tab -->
                 <div class="my-account style-1 margin-top-5 margin-bottom-40">
                     <ul class="tabs-nav">
@@ -33,13 +31,14 @@
                                         <p class="text-danger">{{$message}}</p>
                                         @enderror
                                     </label>
-
-
                                 </div>
-
                                 <div class="form-row">
-                                    <button type="submit" class="button border fw margin-top-10">Đăng kí</button>
+                                    <button type="submit" class="button border fw margin-top-10">Đăng nhập</button>
+                                    <a href="{{ url('/redirect') }}" style="margin-top: 20px;" class="btn btn-lg btn-success btn-block">
+                                        <strong>Login With Google</strong>
+                                    </a>
                                 </div>
+
                             </form>
                         </div>
                     </div>
