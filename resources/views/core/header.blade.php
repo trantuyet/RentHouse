@@ -22,7 +22,7 @@
                         <a href="#">Danh Sách Nhà</a>
                     </li>
                     <li>
-                        <a href="#">Features</a>
+                        <a href="{{route('addHouse')}}">Đăng nhà </a>
                     </li>
                     <li>
                         <a href="#">Pages</a>
