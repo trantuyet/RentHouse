@@ -24,7 +24,7 @@
                         </ul>
 
                         <ul class="my-account-nav">
-                            <li><a href="change-password.html" class="current"><i class="sl sl-icon-lock"></i> Change
+                            <li><a href="{{route('changePassword')}}" class="current"><i class="sl sl-icon-lock"></i> Change
                                     Password</a></li>
                             <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i> Log Out</a></li>
                         </ul>

@@ -28,7 +28,7 @@ class AddHouseRequest extends FormRequest
             'address' => 'required|min:6',
             'desc' => 'required|min:6',
             'pricePerDay' => 'required|numeric|min:100000',
-            'image' => 'required|max:10240'
+//            'image' => 'required'
         ];
     }
 
@@ -43,8 +43,8 @@ class AddHouseRequest extends FormRequest
             'pricePerDay.required' => 'Giá không được để trống',
             'pricePerDay.min' => 'Giá thấp nhất là 100.000 VNĐ',
             'desc.min' => 'Địa chỉ dài tối thiểu 30 kí tự',
-            'image.max' => 'Dung lượng ảnh tối đa là 10Mb',
-            'image.required'=>'Ảnh không được để trống'
+//            'image.max' => 'Dung lượng ảnh tối đa là 10Mb',
+//            'image.required'=>'Ảnh không được để trống'
         ];
     }
 }
