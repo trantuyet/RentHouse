@@ -24,26 +24,20 @@ class HouseController extends Controller
      */
     public function formAddHouse(AddHouseRequest $request): \Illuminate\Http\RedirectResponse
     {
-
-        if ($request->hasFile('photo')){
-            $arr_images = array();
-            $inputfile =  $request->file('photo');
-            foreach ($inputfile as $filephoto) {
-                $namefile = "house-"."-".$filephoto->getClientOriginalName();
-                while (file_exists('uploads/images'.$namefile)) {
-                    $namefile = "house-"."-".$filephoto->getClientOriginalName();
-                }
-                $arr_images[] = $namefile;
-                $filephoto->move('uploads/images',$namefile);
-            }
-            $json_img =  json_encode($arr_images,JSON_FORCE_OBJECT);
-        }
-        else {
-            $arr_images[] = "no_img_room.png";
-            $json_img = json_encode($arr_images,JSON_FORCE_OBJECT);
-        }
+//        $this->validate($request, [
+//            'name' => 'required',
+//            'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+//        ]);
         $house = new House();
         $house->name = $request->name;
+
+
+        if ($request->hasFile('image')) {
+            $image = time().'.'.$request->image->extension();
+            $request->image->move(public_path('upload'), $image);
+            $house->image = 'upload/'.$image;
+        }
+
         $house->pricePerDay = $request->pricePerDay;
         $house->address = $request->address;
         $house->typeOfRoom = $request->typeOfRoom;
@@ -51,6 +45,7 @@ class HouseController extends Controller
         $house->numberOfBathroom = $request->numberOfBathroom;
         $house->user_id = $request->user_id;
         $house->desc = $request->desc;
+
         $house -> save();
         return redirect()->route('home');
 //
@@ -154,11 +149,14 @@ class HouseController extends Controller
 //        return redirect()->route('house.show-infor', $request->house_id);
 //    }
 
-    public function showInfor() {
-//        $house = House::findOrFail($id);
-        return view('house.show-infor');
+    public function showInfor($id)
+    {
+        $house = House::find($id);
+        return view('house.show-infor', compact('house'));
     }
-    public function listHouse() {
+
+    public function listHouse()
+    {
         $houses = House::all();
         return view('house.list-house', compact('houses'));
     }

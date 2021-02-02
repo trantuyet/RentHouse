@@ -34,12 +34,12 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/my-profile', [\App\Http\Controllers\UserController::class, 'updateProfile'])->name('profileUpdate');
     });
     Route::group(['prefix' => 'house'], function () {
-        Route::get('show-infor', [HouseController::class, 'showInfor']);
+        Route::get('/{id}/show-infor', [HouseController::class, 'showInfor'])->name('showInfor');
         Route::get('/add-house', [HouseController::class, 'index']) ->name('house.showAddHouse');
         Route::post('/add-house', [HouseController::class, 'formAddHouse']) ->name('house.addhouse');
         Route::get('list-house', [HouseController::class, 'listHouse']) ->name('listHouse');
-
-
+        Route::get('/my-profile',[UserController::class,'showProfile'])->name('my-profile');
+        Route::post('/my-profile', [UserController::class,'updateProfile'])->name('profile.update');
     });
 });
 

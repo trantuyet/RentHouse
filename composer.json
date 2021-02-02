@@ -14,13 +14,9 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-<<<<<<< HEAD
         "laravel/socialite": "^5.1",
-        "laravel/tinker": "^2.5"
-=======
         "laravel/tinker": "^2.5",
       "ext-json": "*"
->>>>>>> 0f9bb13d963e461f2d92c2b7e342c37e62db4d72
     },
     "require-dev": {
         "facade/ignition": "^2.5",
