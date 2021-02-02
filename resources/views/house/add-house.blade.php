@@ -85,8 +85,8 @@
                         </div>
                         <div class="form-group">
                             <label for="comment">Thêm hình ảnh:</label>
-                            <div class="file-loading">
-                                <input id="file-5" type="file" class="file" name="photo" multiple data-preview-file-type="any" data-upload-url="#">
+                            <div class="File-Upload">
+                                <input type="file" class="upload" name="image" />
                             </div>
                         </div>
                     </div>

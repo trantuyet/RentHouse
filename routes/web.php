@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('show-infor', [HouseController::class, 'showInfor']);
+Route::get('/{id}/show-infor', [HouseController::class, 'showInfor'])->name('showInfor');
 Route::get('list-house', [HouseController::class, 'listHouse']) ->name('listHouse');
 Route::get('/add-house', [HouseController::class, 'index']) ->name('house.showAddHouse');
 Route::post('/add-house', [HouseController::class, 'formAddHouse']) ->name('house.addhouse');
