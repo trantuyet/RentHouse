@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends FormRequest
+class RentHouseRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize(): bool
+    public function authorize()
     {
         return true;
     }
@@ -21,19 +21,19 @@ class LoginRequest extends FormRequest
      *
      * @return array
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            'email' =>'required|email',
-            'password'=> 'required'
+            'checkIn' => 'required|date',
+            'checkOut' => 'required|date'
         ];
     }
+
     public function messages()
     {
         return [
-            'email.required'=>'Truong nay khong duoc de trong',
-            'password.required'=>'Truong nay khong duoc de trong',
-            'email.email'=>'Khong dung dinh danng',
+            'checkIn.required' => 'Ngày đặt phòng không được để trống!',
+            'checkOut.required' => 'Ngày trả phòng không được để trống!',
         ];
     }
 }

@@ -26,7 +26,8 @@ class User extends Authenticatable
         'avatar',
         'fullname',
         'address',
-        'phone'
+        'phone',
+        'google_id'
     ];
 
     /**
@@ -48,7 +49,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function houses() {
+    public function house() {
         return $this->hasMany('\App\Models\House','user_id','id');
     }
 

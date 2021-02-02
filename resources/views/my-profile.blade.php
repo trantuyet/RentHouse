@@ -35,13 +35,13 @@
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Manage Account</li>
-                            <li><a href="{{route('my-profile')}}" class="current"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
+                            <li><a href="{{route('me.profile')}}" class="current"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
                             <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã được thuê</a></li>
                         </ul>
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Manage Listings</li>
-                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
+                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> Những ngôi nhà của tôi</a></li>
                             <li><a href="submit-property.html"><i class="sl sl-icon-action-redo"></i> Submit New Property</a></li>
                         </ul>
 
@@ -67,7 +67,7 @@
                         <input value="{{$user->name}}" name="name" type="text">
 
                         <label>Email</label>
-                        <input  disabled value="{{$user->email}}" name="email" type="text">
+                        <input disabled value="{{$user->email}}" name="email" type="text">
 
                         <label>Phone</label>
                         <input value="{{$user->phone}}" name="phone" type="text">
@@ -87,7 +87,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     </form>
 
