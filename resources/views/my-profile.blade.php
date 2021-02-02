@@ -83,7 +83,11 @@
                             <div class="change-photo-btn">
                                 <div class="photoUpload">
                                     <span><i class="fa fa-upload"></i> Upload Photo</span>
-                                    <input type="file" class="upload" name="image" />
+                                    <div>
+                                        <input type="file" class="upload" name="image" />
+                                        <input type="submit" value="Upload">
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
