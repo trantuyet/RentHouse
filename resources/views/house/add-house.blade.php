@@ -14,12 +14,18 @@
                             <label> Tên nhà</label>
                             <label>
                                 <input value="{{old('name')}}" type="text" name="name">
+                                @error('name')
+                                <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </label>
                         </div>
                         <div class="form-group">
                             <label> Giá thuê </label>
                             <label>
                                 <input value="{{old('pricePerDay')}}" type="text" name="pricePerDay">
+                                @error('pricePerDay')
+                                <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </label>
                         </div>
                         <div class="form-group">
@@ -75,6 +81,9 @@
                                     class="form-control"
                                     name="address"
                                     value="{{old('address')}}">
+                                @error('address')
+                                <p class="text-danger">{{$message}}</p>
+                                @enderror
                             </label>
                         </div>
                         <div class="form-group">

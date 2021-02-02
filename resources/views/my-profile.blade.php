@@ -35,13 +35,13 @@
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Manage Account</li>
-                            <li><a href="{{route('my-profile')}}" class="current"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
+                            <li><a href="{{route('myProfile')}}" class="current"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
                             <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã được thuê</a></li>
                         </ul>
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Manage Listings</li>
-                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> My Properties</a></li>
+                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> Những ngôi nhà của tôi</a></li>
                             <li><a href="submit-property.html"><i class="sl sl-icon-action-redo"></i> Submit New Property</a></li>
                         </ul>
 
@@ -58,7 +58,7 @@
             <div class="col-md-8">
                 <div class="row">
 
-                    <form action="{{route('profile.update')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('profileUpdate')}}" method="post" enctype="multipart/form-data">
                         @csrf
                     <div class="col-md-8 my-profile">
                         <h4 class="margin-top-0 margin-bottom-30">Thông tin cá nhân</h4>
@@ -83,7 +83,11 @@
                             <div class="change-photo-btn">
                                 <div class="photoUpload">
                                     <span><i class="fa fa-upload"></i> Upload Photo</span>
-                                    <input type="file" class="upload" name="image" />
+                                    <div>
+                                        <input type="file" class="upload" name="image" />
+                                        <input type="submit" value="Upload">
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
