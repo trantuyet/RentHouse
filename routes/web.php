@@ -23,7 +23,6 @@ Route::get('/login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 Route::get('/register', [AuthController::class, 'showFormRes'])->name('showFormRes');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('redirect', [\App\Http\Controllers\SocialController::class, 'redirect'])->name('redirect');
 Route::get('callback', [\App\Http\Controllers\SocialController::class, 'callback']);
 Route::group(['middleware' => ['auth']], function () {
@@ -41,5 +40,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/my-profile',[UserController::class,'showProfile'])->name('my-profile');
         Route::post('/my-profile', [UserController::class,'updateProfile'])->name('profile.update');
     });
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
