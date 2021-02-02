@@ -35,7 +35,7 @@
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Manage Account</li>
-                            <li><a href="{{route('myProfile')}}" class="current"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
+                            <li><a href="{{route('me.profile')}}" class="current"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a></li>
                             <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã được thuê</a></li>
                         </ul>
 
@@ -58,7 +58,7 @@
             <div class="col-md-8">
                 <div class="row">
 
-                    <form action="{{route('profileUpdate')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{route('profile.update')}}" method="post" enctype="multipart/form-data">
                         @csrf
                     <div class="col-md-8 my-profile">
                         <h4 class="margin-top-0 margin-bottom-30">Thông tin cá nhân</h4>
@@ -67,7 +67,7 @@
                         <input value="{{$user->name}}" name="name" type="text">
 
                         <label>Email</label>
-                        <input  disabled value="{{$user->email}}" name="email" type="text">
+                        <input disabled value="{{$user->email}}" name="email" type="text">
 
                         <label>Phone</label>
                         <input value="{{$user->phone}}" name="phone" type="text">
@@ -87,7 +87,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     </form>
 

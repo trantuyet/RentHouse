@@ -4,10 +4,14 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <!--Tab -->
+
                 <div class="my-account style-1 margin-top-5 margin-bottom-40">
                     <ul class="tabs-nav">
                         <li class=""><a href="login/#tab1">Đăng nhập</a></li>
                     </ul>
+                    <div class="text-danger">
+                        {{ \Illuminate\Support\Facades\Session::get('login_error') }}
+                    </div>
                     <div class="tabs-container alt">
                         <!-- Login -->
                         <div class="tab-content" id="tab1">
@@ -18,19 +22,19 @@
                                         <i class="im im-icon-Male"></i>
                                         <input name="email" value="{{old('email')}}" class="form-control" type="text"
                                         >
-                                        @error('email')
-                                        <p class="text-danger">{{$message}}</p>
-                                        @enderror
                                     </label>
+                                    @error('email')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div>
                                     <label for="password">Mật khẩu :
                                         <i class="im im-icon-Lock-2"></i>
                                         <input class="input-text" value="{{old('password')}}" type="password" name="password"  />
-                                        @error('password')
-                                        <p class="text-danger">{{$message}}</p>
-                                        @enderror
                                     </label>
+                                    @error('password')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-row">
                                     <button type="submit" class="button border fw margin-top-10">Đăng nhập</button>

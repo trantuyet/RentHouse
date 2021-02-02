@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
+
+
+
     public function house()
     {
         return $this->belongsTo('\App\Models\House', 'house_id', 'id');
