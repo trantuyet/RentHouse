@@ -16,14 +16,14 @@ class CreateHouseTable extends Migration
         Schema::create('house', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigInteger('price');
-            $table->string('address');
-            $table->string('typeHouse');
-            $table->string('typeRoom');
-            $table->integer('bedroom');
-            $table->integer('bathroom');
-            $table->longText('description');
-            $table->unsignedBigInteger('user_id');
+            $table->bigInteger('pricePerDay')->nullable();
+            $table->string('address')->nullable();
+            $table->string('typeOfRoom')->nullable();
+            $table->integer('numberOfBedroom')->nullable();
+            $table->integer('numberOfBathroom')->nullable();
+            $table->longText('desc')->nullable();
+            $table->longText('image')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

@@ -1,6 +1,3 @@
-@extends('master')
-@section('content')
-
 <!DOCTYPE html>
 <head>
 
@@ -9,16 +6,19 @@
     <title>Findeo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <!-- CSS
-     ================================================== -->
+    ================================================== -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/color.css')}}">
 
 </head>
+
 <body>
 
 <!-- Wrapper -->
 <div id="wrapper">
+
 
     <!-- Compare Properties Widget
     ================================================== -->
@@ -33,7 +33,7 @@
 
                 <!-- Property -->
                 <div class="listing-item compact">
-                    <a href="" class="listing-img-container">
+                    <a href="single-property-page-2.html" class="listing-img-container">
                         <div class="remove-from-compare"><i class="fa fa-close"></i></div>
                         <div class="listing-badges">
                             <span>For Sale</span>
@@ -165,15 +165,95 @@
                         <ul id="responsive">
 
                             <li><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="index.html">Home 1</a></li>
+                                    <li><a href="index-2.html">Home 2</a></li>
+                                    <li><a href="index-3.html">Home 3</a></li>
+                                    <li><a href="index-4.html">Home 4</a></li>
+                                </ul>
                             </li>
 
                             <li><a href="#">Listings</a>
+                                <ul>
+                                    <li><a href="#">List Layout</a>
+                                        <ul>
+                                            <li><a href="listings-list-with-sidebar.html">With Sidebar</a></li>
+                                            <li><a href="listings-list-with-map.html">With Map</a></li>
+                                            <li><a href="listings-list-full-width.html">Full Width</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Grid Layout</a>
+                                        <ul>
+                                            <li><a href="listings-grid-standard-with-sidebar.html">Standard With Sidebar</a></li>
+                                            <li><a href="listings-grid-compact-with-sidebar.html">Compact With Sidebar</a></li>
+                                            <li><a href="listings-grid-with-map.html">With Map</a></li>
+                                            <li><a href="listings-grid-full-width.html">Full Width</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Half Map</a>
+                                        <ul>
+                                            <li><a href="listings-half-map-list.html">List Layout</a></li>
+                                            <li><a href="listings-half-map-grid-standard.html">Grid Standard Layout</a></li>
+                                            <li><a href="listings-half-map-grid-compact.html">Grid Compact Layout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li><a class="current" href="#">Features</a>
+                                <ul>
+                                    <li><a href="#">Single Properties</a>
+                                        <ul>
+                                            <li><a href="single-property-page-1.html">Property Style 1</a></li>
+                                            <li><a href="single-property-page-2.html">Property Style 2</a></li>
+                                            <li><a href="single-property-page-3.html">Property Style 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Search Styles</a>
+                                        <ul>
+                                            <li><a href="index.html">Home Search 1</a></li>
+                                            <li><a href="index-2.html">Home Search 2</a></li>
+                                            <li><a href="index-3.html">Home Search 3</a></li>
+                                            <li><a href="listings-list-full-width.html">Advanced Style</a></li>
+                                            <li><a href="listings-list-with-sidebar.html">Sidebar Search</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">My Account</a>
+                                        <ul>
+                                            <li><a href="my-profile.html">My Profile</a></li>
+                                            <li><a href="my-bookmarks.html">Bookmarked Listings</a></li>
+                                            <li><a href="my-properties.html">My Properties</a></li>
+                                            <li><a href="change-password.html">Change Password</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Agencies & Agents</a>
+                                        <ul>
+                                            <li><a href="agencies-list.html">Agencies List</a></li>
+                                            <li><a href="agency-page.html">Agency Page</a></li>
+                                            <li><a href="agents-list.html">Agents List</a></li>
+                                            <li><a href="agent-page.html">Agent Page</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="compare-properties.html">Compare Properties</a></li>
+                                    <li><a href="submit-property.html">Submit Property</a></li>
+                                </ul>
                             </li>
 
                             <li><a href="#">Pages</a>
+                                <ul>
+                                    <li><a href="blog.html">Blog</a>
+                                        <ul>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-post.html">Blog Post</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="elements.html">Elements</a></li>
+                                    <li><a href="pricing-tables.html">Pricing Tables</a></li>
+                                    <li><a href="typography.html">Typography</a></li>
+                                    <li><a href="icons.html">Icons</a></li>
+                                </ul>
                             </li>
 
                         </ul>
@@ -211,6 +291,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+
                     <a href="listings-list-with-sidebar.html" class="back-to-listings"></a>
                     <div class="property-title">
                         <h2>Selway Apartments <span class="property-badge">For Sale</span></h2>
@@ -552,18 +633,19 @@
                     <!-- Booking Widget -->
                     <div class="widget">
                         <div id="booking-widget-anchor" class="boxed-widget booking-widget margin-top-35">
-                            <h3><i class="fa fa-calendar-check-o"></i> Thuê nhà </h3>
+                            <h3><i class="fa fa-calendar-check-o"></i>Thuê Nhà</h3>
                             <div class="row with-forms  margin-top-0">
 
                                 <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
                                 <div class="col-lg-12">
-                                    <input type="text" id="date-picker" placeholder="Thời gian th" readonly="readonly">
+                                    <p>Thời gian thuê</p>
+                                    <input type="text" id="date-picker" placeholder="" readonly="readonly">
                                 </div>
 
                                 <!-- Panel Dropdown -->
                                 <div class="col-lg-12">
                                     <div class="panel-dropdown time-slots-dropdown">
-                                        <a href="#">Giờ vào thuê </a>
+                                        <a href="#">Time</a>
                                         <div class="panel-dropdown-content padding-reset">
                                             <div class="panel-dropdown-scrollable">
 
@@ -884,6 +966,10 @@
 
     <!-- Scripts
     ================================================== -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script type="text/javascript" src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery-migrate-3.1.0.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/chosen.min.js')}}"></script>
@@ -896,14 +982,10 @@
     <script type="text/javascript" src="{{asset('js/mmenu.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/tooltips.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
-
-    <!-- Maps -->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
     <script type="text/javascript" src="{{asset('js/infobox.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/markerclusterer.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/maps.js')}}"></script>
-
-    <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
     <script src="{{asset('js/moment.min.js')}}"></script>
     <script src="{{asset('js/daterangepicker.js')}}"></script>
     <script>
@@ -913,7 +995,7 @@
                 "opens": "left",
                 timePicker: true,
                 startDate: moment().startOf('hour'),
-                endDate: moment().startOf('hour').add(32, 'hour'),
+                endDate: moment().startOf('hour').add(900, 'hour'),
                 // Disabling Date Ranges
                 isInvalidDate: function(date) {
                     // Disabling Date Range
@@ -923,7 +1005,6 @@
                 }
             });
         });
-
         // Calendar animation
         $('#date-picker').on('showCalendar.daterangepicker', function(ev, picker) {
             $('.daterangepicker').addClass('calendar-animated');
@@ -937,7 +1018,6 @@
             $('.daterangepicker').addClass('calendar-hidden');
         });
     </script>
-
 
     <!-- Replacing dropdown placeholder with selected time slot -->
     <script>
@@ -962,4 +1042,3 @@
 
 </body>
 </html>
-@endsection

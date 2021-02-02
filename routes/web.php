@@ -35,6 +35,11 @@ Route::group(['middleware' => ['auth']], function () {
     });
     Route::group(['prefix' => 'house'], function () {
         Route::get('show-infor', [HouseController::class, 'showInfor']);
-        Route::get('add-house', [HouseController::class, 'formAddHouse']);
+        Route::get('/add-house', [HouseController::class, 'index']) ->name('house.showAddHouse');
+        Route::post('/add-house', [HouseController::class, 'formAddHouse']) ->name('house.addhouse');
+        Route::get('list-house', [HouseController::class, 'listHouse']) ->name('listHouse');
+
+
     });
 });
+

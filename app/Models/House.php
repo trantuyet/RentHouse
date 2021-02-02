@@ -8,23 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class House extends Model
 {
     use HasFactory;
+    protected $table = "house";
 
-    protected $table = 'house';
 
-    public static function findOrFail($id)
+    public function user()
     {
-    }
-
-    public function user() {
         return $this->belongsTo('\App\Models\User','user_id','id');
     }
 
-    public function images()
+    public function image()
     {
-        return $this->hasMany('\App\Models\Image', 'house_id', 'id');
+        return $this->hasMany('\App\Models\HouseImage', 'house_id', 'id');
     }
 
-    public function bills() {
-        return $this->hasMany('\App\Models\Bill','house_id','id');
+    public function bills ()
+    {
+        return $this->hasMany('\App\Models\Bill', 'house_id', 'id');
+    }
+    public static function findOrFail($id)
+    {
+
     }
 }
