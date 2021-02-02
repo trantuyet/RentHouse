@@ -1,3 +1,4 @@
+
 @extends('master')
 @section('content')
     <div class="clearfix"></div>
@@ -716,7 +717,6 @@
         </div>
     </a>
     <!-- Flip banner / End -->
-
 @endsection
 
 

@@ -149,7 +149,7 @@ class HouseController extends Controller
 //        return redirect()->route('house.show-infor', $request->house_id);
 //    }
 
-    public function showInfor($id)
+    public function showDetail($id)
     {
         $house = House::find($id);
         return view('house.show-infor', compact('house'));
