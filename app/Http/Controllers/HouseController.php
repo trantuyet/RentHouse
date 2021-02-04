@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\House;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
@@ -23,11 +24,6 @@ class HouseController extends Controller
     {
         $house = new House();
         $house->fill($request->all());
-//        if ($request->hasFile('image')) {
-//            $image = $request->file('image');
-//            $path = $image->store('houses', 'public');
-//            $house->image = $path;
-//        }
         $house->user_id = Auth::id();
         $house->save();
         toastr()->success('Đăng nhà cho thuê thành công!');
@@ -95,7 +91,7 @@ class HouseController extends Controller
     public function listHouse()
     {
         $houses = House::all();
-        return view('house.list-house', compact('houses'));
+        $users = User::all();
+        return view('house.list-house', compact('houses','users'));
     }
-//, compact('house')
 }

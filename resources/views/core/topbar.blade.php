@@ -3,7 +3,7 @@
         <div class="left-side">
             <ul class="top-bar-menu">
                 <li><i class="fa fa-phone"></i> +84 326 279 089</li>
-                <li><i class="fa fa-envelope"></i> <a href="#">maxxin47@gmail.com</a></li>
+                <li><i class="fa fa-envelope"></i> <a href="#">2021NoLimit@gmail.com</a></li>
                 <li>
                     <div class="top-bar-dropdown">
                         <span>Tùy chọn</span>
