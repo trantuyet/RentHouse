@@ -46,7 +46,7 @@
                         </ul>
 
                         <ul class="my-account-nav">
-                            <li><a href="change-password.html"><i class="sl sl-icon-lock"></i> Change Password</a></li>
+                            <li><a href="{{route('changePassword')}}"><i class="sl sl-icon-lock"></i> Change Password</a></li>
                             <li><a href="#"><i class="sl sl-icon-power"></i> Log Out</a></li>
                         </ul>
 
@@ -83,7 +83,11 @@
                             <div class="change-photo-btn">
                                 <div class="photoUpload">
                                     <span><i class="fa fa-upload"></i> Upload Photo</span>
-                                    <input type="file" class="upload" name="image" />
+                                    <div>
+                                        <input type="file" class="upload" name="image" />
+                                        <input type="submit" value="Upload">
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

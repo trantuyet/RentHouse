@@ -22,7 +22,7 @@
                         <a href="{{route('listHouse')}}">Danh Sách Nhà</a>
                     </li>
                     <li>
-                        <a href="{{route('me.showAddHouse')}}">Đăng nhà </a>
+                        <a href="{{route('house.addhouse')}}">Thêm nhà</a>
                     </li>
                     <li>
                         <a href="#">Pages</a>
@@ -49,7 +49,7 @@
 
                         <!-- User Menu -->
                         <div class="user-menu">
-                            <div class="user-name"><span><img src="images/agent-03.jpg" alt=""></span>Hi, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
+                            <div class="user-name"><span><img src="" alt=""></span>Hi, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
                             <ul>
                                 <li><a href="{{ route('me.profile') }}"><i class="sl sl-icon-user"></i> My Profile</a></li>
                                 <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
@@ -57,7 +57,6 @@
                                 <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Log Out</a></li>
                             </ul>
                         </div>
-
                         <a href="{{ route('me.showAddHouse') }}" class="button border">Submit Property</a>
                     </div>
                 @endif

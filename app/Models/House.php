@@ -9,7 +9,7 @@ class House extends Model
 {
     use HasFactory;
 
-    protected $table = "house";
+    protected $table = "houses";
 
 
     public function user()

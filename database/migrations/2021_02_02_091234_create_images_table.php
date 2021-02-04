@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('image');
             $table->unsignedBigInteger('house_id');
-            $table->foreign('house_id')->references('id')->on('house');
+            $table->foreign('house_id')->references('id')->on('houses');
             $table->timestamps();
         });
     }
