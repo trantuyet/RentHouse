@@ -21,6 +21,7 @@ class HouseController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function formAddHouse(Request $request): \Illuminate\Http\RedirectResponse

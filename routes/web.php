@@ -28,14 +28,14 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('redirect', [\App\Http\Controllers\SocialController::class, 'redirect'])->name('redirect');
 Route::get('callback', [\App\Http\Controllers\SocialController::class, 'callback']);
 
+Route::middleware('auth')->group(function () {
+    // Router me
+    Route::prefix('me')->group(function () {
+        Route::get('/change-password', [ChangePasswordController::class, 'changePassword'])->name('changePassword');
+        Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('updatePassword');
+        Route::get('/profile', [UserController::class, 'showProfile'])->name('me.profile');
+        Route::post('/profile', [UserController::class, 'updateProfile'])->name('profile.update');
 
-    Route::middleware('auth')->group(function () {
-        // Router me
-        Route::prefix('me')->group(function () {
-            Route::get('/change-password', [ChangePasswordController::class, 'changePassword'])->name('changePassword');
-            Route::post('/change-password', [ChangePasswordController::class, 'updatePassword'])->name('updatePassword');
-            Route::get('/profile', [UserController::class, 'showProfile'])->name('me.profile');
-            Route::post('/profile', [UserController::class, 'updateProfile'])->name('profile.update');
 
             Route::prefix('houses')->group(function () {
                 Route::get('/add-house', [HouseController::class, 'index'])->name('me.showAddHouse');
@@ -57,6 +57,5 @@ Route::get('callback', [\App\Http\Controllers\SocialController::class, 'callback
         Route::get('/', [HouseController::class, 'listHouse'])->name('listHouse');
         Route::get('{id}/detail', [HouseController::class, 'showDetail'])->name('houses.showDetail');
     });
-
 
 

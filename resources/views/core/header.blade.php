@@ -22,7 +22,6 @@
                         <a href="{{route('listHouse')}}">Danh Sách Nhà</a>
                     </li>
                     <li>
-                        <a href="{{route('house.showAddHouse')}}">Thêm nhà</a>
                         <a href="{{route('me.showAddHouse')}}">Đăng nhà </a>
                     </li>
                     <li>
@@ -33,14 +32,6 @@
             <div class="clearfix"></div>
         </div>
         <div class="right-side">
-
-
-
-
-
-
-
-
             <div class="header-widget">
                 @if(!\Illuminate\Support\Facades\Auth::check())
                     <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Đăng ký</a>
@@ -50,23 +41,14 @@
 
                         <!-- User Menu -->
                         <div class="user-menu">
-                            <div class="user-name"><span><img src="images/agent-03.jpg" alt=""></span>Hi, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
+                            <div class="user-name"><span><img src="" alt=""></span>Hi, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
                             <ul>
                                 <li><a href="{{ route('me.profile') }}"><i class="sl sl-icon-user"></i> My Profile</a></li>
                                 <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
-                                <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-docs"></i> My Properties</a></li>
+{{--                                <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-docs"></i> My Properties</a></li>--}}
                                 <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Log Out</a></li>
                             </ul>
                         </div>
-                        <ul>
-                            <li><a href="{{route('myProfile')}}"><i class="sl sl-icon-user"></i> Thông tin cá nhân</a>
-                            </li>
-                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã cho
-                                    thuê</a></li>
-                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> Danh sách bạn đã đăng</a>
-                            </li>
-                            <li><a href="{{route('logout')}}"><i class="sl sl-icon-power"></i>Đăng xuất</a></li>
-                        </ul>
                         <a href="{{ route('me.showAddHouse') }}" class="button border">Submit Property</a>
                     </div>
                 @endif

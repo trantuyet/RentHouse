@@ -1,7 +1,5 @@
 @extends('master')
 @section('content')
-    <!-- Content
-    ================================================== -->
     <div class="container">
         <div class="row fullwidth-layout">
 
@@ -62,17 +60,15 @@
                                     <a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&hl=en&t=v&hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom"
                                        class="listing-address popup-gmaps">
                                         <i class="fa fa-map-marker"></i>
-                                        9364 School St. Lynchburg, NY
+                                        {{$house->address}}
                                     </a>
 
                                     <a href="single-property-page-1.html" class="details button border">Details</a>
                                 </div>
 
                                 <ul class="listing-details">
-                                    <li>530 sq ft</li>
-                                    <li>1 Bedroom</li>
-                                    <li>3 Rooms</li>
-                                    <li>1 Bathroom</li>
+                                    <li>{{$house->numberOfBedroom}} Phòng ngủ</li>
+                                    <li>{{$house->numberOfBathroom}} Phòng tắm</li>
                                 </ul>
 
                                 <div class="listing-footer">
