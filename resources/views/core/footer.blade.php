@@ -1,60 +1,44 @@
 <div id="footer" class="sticky-footer">
-    <!-- Main -->
     <div class="container">
         <div class="row">
             <div class="col-md-5 col-sm-6">
-                <img class="footer-logo" src="images/logo.png" alt="">
+                <img class="footer-logo" src="public/images/logo.png" alt="">
                 <br><br>
-                <p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
+                <p>Website chúng tôi cung cấp cho bạn dịch vụ cho thuê nhà tiện lợi, nhanh chóng và bảo mật thông tin
+                    người dùng </p>
             </div>
-
             <div class="col-md-4 col-sm-6 ">
-                <h4>Helpful Links</h4>
+                <h4>Chuyển hướng nhanh</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Add Property</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Đăng nhập</a></li>
+                    <li><a href="#">Đăng ký</a></li>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="#">Thêm nhà mới</a></li>
+                    <li><a href="#">Giá</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
                 </ul>
-
                 <ul class="footer-links">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Our Agents</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="https://tinhocdongian.com">Blog</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Bạn có biết</a></li>
+                    <li><a href="#">Liên lạc</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </div>
-
             <div class="col-md-3  col-sm-12">
-                <h4>Contact Us</h4>
+                <h4>Liên lạc với chúng tôi</h4>
                 <div class="text-widget">
-                    <span>12345 Little Lonsdale St, Melbourne</span> <br>
-                    Phone: <span>(123) 123-456 </span><br>
-                    E-Mail:<span> <a href="#">office@example.com</a> </span><br>
+                    <span>23/TT01, Mon City, Hàm Nghi, Mỹ Đình, Hà Nội</span> <br>
+                    Phone: <span>+84 326 279 089</span><br>
+                    E-Mail:<span> <a href="#">maxxin47@gmail.com</a> </span><br>
                 </div>
-
-                <ul class="social-icons margin-top-20">
-                    <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-                    <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-                    <li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
-                </ul>
-
             </div>
-
         </div>
-
-        <!-- Copyright -->
         <div class="row">
             <div class="col-md-12">
-                <div class="copyrights">© 2016 Findeo. All Rights Reserved.</div>
+                <div class="copyrights">2021 - by Rent House Unlimited with love <3</div>
             </div>
         </div>
-
     </div>
-
 </div>

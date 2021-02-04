@@ -25,18 +25,21 @@ class RegisterRequest extends FormRequest
     {
               return [
                   'name'=> "required",
-                  'email' => "required|email",
-                  'password'=> "required"
+                  'email' => "required|email|unique:users,email",
+                  'password'=> "required|min:6|confirmed",
+                  'password_confirmation'=>'sometimes|required_with:password',
         ];
     }
 
     public function messages(): array
     {
         return [
-            'name.require'=>'Truong nay khong duoc de trong',
-            'email.require'=>'Truong nay khong duoc de trong',
-            'password.require'=>'Truong nay khong duoc de trong',
+            'name.required'=>'Truong nay khong duoc de trong',
+            'email.required'=>'Truong nay khong duoc de trong',
             'email.email'=>'Khong dung dinh danng',
+            'password.required'=>'Truong nay khong duoc de trong',
+            'password.min'=>'It nhat 6 ky tu tro len',
+
         ];
     }
 }
