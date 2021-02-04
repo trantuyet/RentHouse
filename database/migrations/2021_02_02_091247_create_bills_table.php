@@ -13,17 +13,19 @@ class CreateBillsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bills', function (Blueprint $table) {
-            $table->id();
-            $table->string('totalPrice');
-            $table->date('checkIn');
-            $table->date('checkOut');
-            $table->unsignedBigInteger('house_id');
-            $table->foreign('house_id')->references('id')->on('houses');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('bills')) {
+            Schema::create('bills', function (Blueprint $table) {
+                $table->id();
+                $table->string('totalPrice');
+                $table->date('checkIn');
+                $table->date('checkOut');
+                $table->unsignedBigInteger('house_id');
+                $table->foreign('house_id')->references('id')->on('houses');
+                $table->unsignedBigInteger('user_id');
+                $table->foreign('user_id')->references('id')->on('users');
+                $table->timestamps();
+            });
+        }
     }
 
     /**

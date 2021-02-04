@@ -59,47 +59,39 @@
             </div>
 
             <div class="col-md-8">
-                <div class="row">
+                <table class="manage-table responsive-table">
 
-                    <form action="{{route('profile.update')}}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="col-md-8 my-profile">
-                            <h4 class="margin-top-0 margin-bottom-30">Thông tin cá nhân</h4>
-                            <label>Name</label>
-                            <input value="{{$user->name}}" name="name" type="text">
-                            @error('name')
-                            <p class="text-danger">{{ $message }}</p>
-                            @enderror
-                            <label>Email</label>
-                            <input disabled value="{{$user->email}}" type="text">
-                            <label>Phone</label>
-                            <input value="{{$user->phone}}" name="phone" type="text">
-                            <label>Address</label>
-                            <input value="{{$user->address}}" name="address" type="text">
-                            <button class="button margin-top-20 margin-bottom-20" type="submit">Save Changes</button>
-                        </div>
-                        <div class="col-md-4">
-                            <!-- Avatar -->
-                            <div class="edit-profile-photo">
-                                <img src="{{asset('storage/' . $user->image)}}" alt="">
-                                <div class="change-photo-btn">
-                                    <div class="photoUpload">
-                                        <span><i class="fa fa-upload"></i> Upload Photo</span>
-                                        <div>
-                                            <input type="file" class="upload" name="image"/>
-                                            {{--                                            <input type="submit" value="Upload">--}}
-                                        </div>
+                    <tr>
+                        <th><i class="fa fa-file-text"></i> Property</th>
+                        <th class="expire-date"><i class="fa fa-calendar"></i> Expiration Date</th>
+                        <th></th>
+                    </tr>
 
-                                    </div>
-                                </div>
+                    <!-- Item #1 -->
+                    @foreach($houses as $house)
+                    <tr>
+                        <td class="title-container">
+                            <img src="images/listing-02.jpg" alt="">
+                            <div class="title">
+                                <h4><a href="#">{{ $house->name }}</a></h4>
+                                <span>{{ $house->address }}</span>
+                                <span class="table-property-price">{{ $house->pricePerDay }} / ngay</span>
                             </div>
-                        </div>
-                    </form>
-
-                </div>
+                        </td>
+                        <td class="expire-date">{{ $house->created_at }}</td>
+                        <td class="action">
+                            <a href="#"><i class="fa fa-pencil"></i> Edit</a>
+                            <a href="#"><i class="fa  fa-eye-slash"></i> Hide</a>
+                            <a href="#" class="delete"><i class="fa fa-remove"></i> Delete</a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </table>
+                <a href="submit-property.html" class="margin-top-40 button">Submit New Property</a>
             </div>
 
         </div>
     </div>
 
 @endsection
+

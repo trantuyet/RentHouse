@@ -35,6 +35,6 @@ class UserController extends Controller
     public function getListHouseOfUser() {
         $userLogin = Auth::user();
         $houses = $userLogin->house;
-        dd($houses);
+        return view('users.my-houses', compact('houses'));
     }
 }
