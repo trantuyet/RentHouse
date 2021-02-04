@@ -10,6 +10,17 @@ class House extends Model
     use HasFactory;
 
     protected $table = "houses";
+    protected $fillable = [
+        "name",
+        "pricePerDay",
+        "address",
+        "numberOfBedroom",
+        "numberOfBathroom",
+        "desc",
+        "image",
+        "user_id",
+        "category_id"
+    ];
 
 
     public function user()

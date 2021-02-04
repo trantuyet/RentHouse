@@ -35,9 +35,9 @@ Route::middleware('auth')->group(function () {
         Route::post('/profile', [UserController::class, 'updateProfile'])->name('profile.update');
 
         Route::prefix('houses')->group(function (){
-            Route::get('/add-house', [HouseController::class, 'index'])->name('me.showAddHouse');
-            Route::post('/add-house', [HouseController::class, 'formAddHouse'])->name('house.addhouse');
             Route::get('/', [UserController::class, 'getListHouseOfUser'])->name('me.getListHouseOfUser');
+            Route::get('/add-house', [HouseController::class, 'formAddHouse'])->name('me.showAddHouse');
+            Route::post('/add-house', [HouseController::class, 'store'])->name('house.addhouse');
         });
 
     });
