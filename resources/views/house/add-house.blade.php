@@ -8,41 +8,21 @@
                 <div class="col-md-12">
                     <h2><i class="fa fa-plus-circle"></i> Add Property</h2>
                 </div>
-                <div class="listings-container list-layout">
-                    <div class="col-md-8 my-profile">
-                        <h3 class="desc-headline">Tạo nhà mới</h3>
-                        <div class="form-group">
-                            <label> Tên nhà</label>
-                            <label>
-                                <input value="{{old('name')}}" type="text" name="name">
-                                @error('name')
-                                <p class="text-danger">{{$message}}</p>
-                                @enderror
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label> Giá thuê </label>
-                            <label>
-                                <input value="{{old('pricePerDay')}}" type="text" name="pricePerDay">
-                                @error('pricePerDay')
-                                <p class="text-danger">{{$message}}</p>
-                                @enderror
-                            </label>
-
             </div>
         </div>
     </div>
-
-
     <!-- Content
     ================================================== -->
     <div class="container">
         <div class="row">
 
+
             <!-- Submit Page -->
             <div class="col-md-12">
                 <div class="submit-page">
-
+                    <div class="col-md-12">
+                        <h2><i class="fa fa-plus-circle"></i> Add Property</h2>
+                    </div>
                     <div class="notification notice large margin-bottom-55">
                         <h4>Don't Have an Account?</h4>
                         <p>If you don't have an account you can create one by entering your email address in contact details section. A password will be automatically emailed to you.</p>
@@ -165,7 +145,6 @@
                             </div>
 
                         </div>
-<<<<<<< HEAD
                         <div class="form-group">
                             <label>Địa chỉ</label>
                             <label>

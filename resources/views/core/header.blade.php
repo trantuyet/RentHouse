@@ -2,7 +2,7 @@
     <div class="container">
         <div class="left-side">
             <div id="logo">
-                <a href="">
+                <a href="{{route('home')}}">
                     <img src="{{asset('images/logo.png')}}" alt="">
                 </a>
             </div>
