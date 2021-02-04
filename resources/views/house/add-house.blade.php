@@ -8,6 +8,27 @@
                 <div class="col-md-12">
                     <h2><i class="fa fa-plus-circle"></i> Add Property</h2>
                 </div>
+                <div class="listings-container list-layout">
+                    <div class="col-md-8 my-profile">
+                        <h3 class="desc-headline">Tạo nhà mới</h3>
+                        <div class="form-group">
+                            <label> Tên nhà</label>
+                            <label>
+                                <input value="{{old('name')}}" type="text" name="name">
+                                @error('name')
+                                <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label> Giá thuê </label>
+                            <label>
+                                <input value="{{old('pricePerDay')}}" type="text" name="pricePerDay">
+                                @error('pricePerDay')
+                                <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </label>
+
             </div>
         </div>
     </div>
@@ -144,6 +165,26 @@
                             </div>
 
                         </div>
+<<<<<<< HEAD
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    name="address"
+                                    value="{{old('address')}}">
+                                @error('address')
+                                <p class="text-danger">{{$message}}</p>
+                                @enderror
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Mô tả chung </label>
+                            <label for=""></label><textarea class="form-control" name="desc" id=""
+                                                            cols="30" rows="10">
+              </textarea>
+
                         <!-- Row / End -->
 
                     </div>

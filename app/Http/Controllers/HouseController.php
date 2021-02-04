@@ -22,7 +22,7 @@ class HouseController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function formAddHouse(Request $request): \Illuminate\Http\RedirectResponse
+    public function formAddHouse(AddHouseRequest $request): \Illuminate\Http\RedirectResponse
     {
 //        $this->validate($request, [
 //            'name' => 'required',
