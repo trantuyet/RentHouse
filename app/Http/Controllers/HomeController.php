@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        return view('dashboard');
+        $houses = House::where('status','=', StatusConst::LEASE)->get();
+        return view('dashboard', compact('houses'));
     }
 }

@@ -24,6 +24,7 @@ class HouseController extends Controller
     {
         $house = new House();
         $house->fill($request->all());
+        $house->status = StatusConst::LEASE;
         $house->user_id = Auth::id();
         $house->save();
         toastr()->success('Đăng nhà cho thuê thành công!');
