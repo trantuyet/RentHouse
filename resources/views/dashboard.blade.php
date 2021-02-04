@@ -716,7 +716,6 @@
         </div>
     </a>
     <!-- Flip banner / End -->
-
 @endsection
 
 

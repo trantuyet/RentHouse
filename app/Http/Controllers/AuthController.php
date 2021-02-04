@@ -14,25 +14,24 @@ class AuthController extends Controller
 {
     function showFormLogin()
     {
-
         return view('login');
     }
 
     function login(LoginRequest $request): \Illuminate\Http\RedirectResponse
     {
-        $email = $request->email    ;
+        $email = $request->email;
         $password = $request->password;
 
         $data = [
             'email' => $email,
             'password' => $password
         ];
-        if (Auth::attempt($data)) {
-            $request->session()->regenerate();
-            Session::push('login',true);
-            return redirect()->route('home');
+        if (!Auth::attempt($data)) {
+
+            Session::flash('login_error', 'Account not fount');
+            return redirect()->route('login');
         }
-        return redirect()->route('login');
+        return redirect()->route('home');
     }
 
     function register(RegisterRequest $request): \Illuminate\Http\RedirectResponse
