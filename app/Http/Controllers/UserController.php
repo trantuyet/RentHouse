@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateProfileRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,20 +13,22 @@ class UserController extends Controller
     public function showProfile()
     {
         $user = Auth::user();
-        return view('my-profile', compact('user'));
+        return view('users.my-profile', compact('user'));
     }
 
-    public function updateProfile(Request $request)
+    public function updateProfile(UpdateProfileRequest $request)
     {
         $id = Auth::id();
         $user = User::findOrFail($id);
         $user->fill($request->all());
+        //upload file
         if ($request->hasFile('image')) {
-            $image = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('upload'), $image);
-            $user->image = 'upload/' . $image;
+            $image = $request->file('image');
+            $path = $image->store('images', 'public');
+            $user->image = $path;
         }
         $user->save();
+        toastr()->success('Cập nhật thông tin thành công!');
         return redirect()->route('me.profile');
     }
 
