@@ -228,9 +228,10 @@
                                     </div>
 
                                     <div class="listing-carousel">
-                                        <div><img src="{{asset('images/listing-01.jpg')}}" alt=""></div>
-                                        <div><img src="{{asset('images/listing-01b.jpg')}}" alt=""></div>
-                                        <div><img src="{{asset('images/listing-01c.jpg')}}" alt=""></div>
+                                        <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
+                                        @foreach($house->images as $img)
+                                        <div><img src="{{asset('storage/' . $img->image)}}" alt=""></div>
+                                        @endforeach
                                     </div>
 
                                 </a>
@@ -238,7 +239,7 @@
                                 <div class="listing-content">
 
                                     <div class="listing-title">
-                                        <h4><a href="{{ route('houses.showDetail', $house->id) }}">{{ $house->name }}</a></h4>
+                                        <h4><a href="{{ route('houses.showDetail', $house->id) }}">{{ Str::limit($house->name, 20) }}</a></h4>
                                         <a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&hl=en&t=v&hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom"
                                            class="listing-address popup-gmaps">
                                             <i class="fa fa-map-marker"></i>

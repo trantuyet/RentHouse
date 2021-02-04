@@ -29,9 +29,9 @@ class House extends Model
         return $this->belongsTo('\App\Models\User', 'user_id', 'id');
     }
 
-    public function image()
+    public function images()
     {
-        return $this->hasMany('\App\Models\HouseImage', 'house_id', 'id');
+        return $this->hasMany(Image::class, 'house_id', 'id');
     }
 
     public function bills()
