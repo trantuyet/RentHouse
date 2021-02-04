@@ -40,6 +40,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('list-house', [HouseController::class, 'listHouse']) ->name('listHouse');
         Route::get('/my-profile',[UserController::class,'showProfile'])->name('my-profile');
         Route::post('/my-profile', [UserController::class,'updateProfile'])->name('profile.update');
+        Route::post('/{id}/show-infor/rent', [UserController::class,''])->name('profile.update');
     });
 });
+
 

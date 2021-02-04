@@ -8,6 +8,7 @@ use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\AddHouseRequest;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class HouseController extends Controller
 {
@@ -22,7 +23,7 @@ class HouseController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function formAddHouse(AddHouseRequest $request): \Illuminate\Http\RedirectResponse
+    public function formAddHouse(Request $request): \Illuminate\Http\RedirectResponse
     {
 //        $this->validate($request, [
 //            'name' => 'required',
@@ -34,7 +35,7 @@ class HouseController extends Controller
 
         if ($request->hasFile('image')) {
             $image = time().'.'.$request->image->extension();
-            $request->image->move(public_path('upload'), $image);
+            $request->image->move(storage_path('upload'), $image);
             $house->image = 'upload/'.$image;
         }
 
@@ -158,7 +159,20 @@ class HouseController extends Controller
     public function listHouse()
     {
         $houses = House::all();
-        return view('house.list-house', compact('houses'));
+        $image = Image::all();
+        return view('house.list-house', compact('houses', 'image'));
+    }
+
+    public function rentHome(Request $request) {
+        $userRent = [];
+        $userRent['id'] = $request->user_id;
+        $userRent['house_id'] = $request->house_id;
+        $userRent['checkIn'] = $request->checkIn;
+        $userRent['checkOut'] = $request->checkOut;
+
+        Session::put('userRent', $userRent);
+        // var_dump(Session::get('userRent'));
+        return redirect()->route('house.confirm', $request->house_id);
     }
 //, compact('house')
 }
