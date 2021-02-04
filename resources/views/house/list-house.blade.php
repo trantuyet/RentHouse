@@ -30,7 +30,8 @@
                                         <i class="fa fa-map-marker"></i>
                                         {{$house->address}}
                                     </a>
-                                    <a href="single-property-page-1.html" class="details button border">Details</a>
+                                        <button>Chi tiết </button>
+{{--                                    <a href="single-property-page-1.html" class="details button border">Details</a>--}}
                                 </div>
                                 <ul class="listing-details">
                                     <li>{{$house->numberOfBedroom}} Bed Room</li>
