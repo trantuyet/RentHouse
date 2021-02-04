@@ -26,7 +26,25 @@ class HouseController extends Controller
         $house->fill($request->all());
         $house->status = StatusConst::LEASE;
         $house->user_id = Auth::id();
+
+        //upload file
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = $image->store('houses', 'public');
+            $house->image = $path;
+        }
+
         $house->save();
+        if ($request->hasFile('image_detail')) {
+            $imageDetail = $request->file('image_detail');
+            foreach ($imageDetail as $img) {
+                $path = $img->store('houses', 'public');
+                $image = new Image();
+                $image->image = $path;
+                $image->house_id = $house->id;
+                $image->save();
+            }
+        }
         toastr()->success('Đăng nhà cho thuê thành công!');
         return redirect()->route('home');
     }
@@ -94,6 +112,6 @@ class HouseController extends Controller
     {
         $houses = House::all();
         $users = User::all();
-        return view('house.list-house', compact('houses','users'));
+        return view('house.list-house', compact('houses', 'users'));
     }
 }

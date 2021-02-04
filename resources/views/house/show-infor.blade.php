@@ -34,13 +34,27 @@
 
                 <!-- Slider -->
                 <div class="property-slider default">
-                    <a href="images/single-property-01.jpg" data-background-image="images/single-property-01.jpg"
-                       class="item mfp-gallery"></a>
-                </div>
 
+
+                    <a href="{{ asset('storage/' . $house->image) }}"
+                       data-background-image="{{ asset('storage/' . $house->image) }}"
+                       class="item mfp-gallery"></a>
+                    @foreach($house->images as $img)
+                        <a href="{{ asset('storage/' . $img->image) }}"
+                           data-background-image="{{ asset('storage/' . $img->image) }}"
+                           class="item mfp-gallery"></a>
+                    @endforeach
+                </div>
                 <!-- Slider Thumbs -->
                 <div class="property-slider-nav">
-                    <div class="item"><img src="images/single-property-01.jpg" alt=""></div>
+                    <div class="item">
+                        <img src="{{ asset('storage/' . $house->image) }}" alt="">
+                    </div>
+                    @foreach($house->images as $img)
+                        <div class="item">
+                            <img src="{{ asset('storage/' . $img->image) }}" alt="">
+                        </div>
+                    @endforeach
                 </div>
 
             </div>
@@ -57,7 +71,7 @@
 
                     <!-- Main Features -->
                     <ul class="property-main-features">
-                        <li>Phòng ngủ  <span>{{$house->numberOfBedroom}} </span></li>
+                        <li>Phòng ngủ <span>{{$house->numberOfBedroom}} </span></li>
                         <li>Phòng tắm <span>{{$house->numberOfBathroom}} </span></li>
                     </ul>
 
@@ -125,7 +139,7 @@
                         <!-- Agent Widget -->
                         <div class="agent-widget">
                             <div class="agent-title">
-                                <div class="agent-photo">  <img src="{{asset('storage/' . $user->image)}}" alt=""></div>
+                                <div class="agent-photo"><img src="{{asset('storage/' . $user->image)}}" alt=""></div>
                                 <div class="agent-details">
                                     <h4>{{$user->name}}</h4>
                                 </div>

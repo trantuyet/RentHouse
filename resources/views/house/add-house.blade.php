@@ -16,9 +16,10 @@
 
                             <div class="notification notice large margin-bottom-55">
                                 <h4>Bạn có nhà muốn cho thuê?</h4>
-                                <p>Vui lòng điền đầy đủ thông tin về ngôi nhà của bạn để mọi người có được thông tin cần thiết</p>
+                                <p>Vui lòng điền đầy đủ thông tin về ngôi nhà của bạn để mọi người có được thông tin cần
+                                    thiết</p>
                             </div>
-                            <form action="{{ route('house.addhouse') }}" method="post">
+                            <form action="{{ route('house.addhouse') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <!-- Section -->
                                 <h3>Thông tin nhà</h3>
@@ -105,7 +106,6 @@
                                 <!-- Section / End -->
                                 <!-- Section -->
                                 <h3>Vị trí</h3>
-                                <div class="submit-section">
                                     <!-- Row -->
                                     <div class="row with-forms">
 
@@ -121,6 +121,20 @@
                                         <textarea class="form-control" name="desc" cols="30" rows="10"></textarea>
                                         <!-- Row / End -->
                                     </div>
+
+                                <h3>Hình ảnh</h3>
+                                <!-- Row -->
+                                <div class="row with-forms">
+
+                                    <!-- Address -->
+                                    <div class="col-md-12">
+                                        <input name="image" type="file" id="image_thumbnail">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <a id="new_image" class="button" style="float: right">Thêm ảnh</a>
+                                    </div>
+                                </div>
+                                <div class="submit-section">
                                     <!-- Section / End -->
                                     <button type="submit" class="button preview margin-top-5">Đăng <i
                                             class="fa fa-arrow-circle-right"></i></button>
