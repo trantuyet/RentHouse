@@ -12,10 +12,15 @@
                     <!-- Listing Item -->
                         <div class="listing-item">
 
-                            <a href="single-property-page-1.html" class="listing-img-container">
+                            <a href="" class="listing-img-container">
 
                                 <div class="listing-badges">
-                                    <span> Nhà ở </span>
+
+                                    <span> @if($house->category_id ==2) Nhà ở </span>
+
+                                    <span>@else Chung cư </span>
+                                    @endif
+
                                 </div>
 
                                 <div class="listing-img-content">
@@ -27,7 +32,7 @@
 
                                 <div class="listing-carousel">
 
-                                        <img>{{$house->image}}
+                                    <img>{{$house->image}}
 
                                 </div>
                             </a>
@@ -35,14 +40,15 @@
                             <div class="listing-content">
 
                                 <div class="listing-title">
-                                    <h4><a href="single-property-page-1.html">{{ $house->name }}</a></h4>
-                                    <a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&hl=en&t=v&hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom"
-                                       class="listing-address popup-gmaps">
+                                    <h4><a href="{{route('houses.showDetail', $house->id)}}">{{$house->name   }}</a>
+                                    </h4>
+                                    <a href=""
+                                       class="listing-address ">
                                         <i class="fa fa-map-marker"></i>
                                         {{$house->address}}
                                     </a>
-
-                                    <a href="#" class="details button border">Xem chi tiết</a>
+                                    <a href="{{route('houses.showDetail', $house->id)}}" class="details button border">Xem
+                                        chi tiết</a>
                                 </div>
 
                                 <ul class="listing-details">
@@ -52,7 +58,7 @@
 
                                 <div class="listing-footer">
                                     @if (!! $user = \App\Models\User::find($house->user_id))
-                                    <a href="#"><i class="fa fa-user"></i> {{ $user->name}}</a>
+                                        <a href="#"><i class="fa fa-user"></i> {{ $user->name}}</a>
                                     @endif
                                     <span><i class="fa fa-calendar-o"></i> {{ $house->create_at }}</span>
                                 </div>
@@ -69,17 +75,13 @@
                     <nav class="pagination">
                         <ul>
                             <li><a href="#" class="current-page">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li class="blank">...</li>
-                            <li><a href="#">22</a></li>
                         </ul>
                     </nav>
 
                     <nav class="pagination-next-prev">
                         <ul>
                             <li><a href="#" class="prev">Trang trước</a></li>
-                            <li><a href="#" class="next">Trang sau</a></li>
+                            <li><a href="#" class="next">Trang tiếp theo</a></li>
                         </ul>
                     </nav>
                 </div>

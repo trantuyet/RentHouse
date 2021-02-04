@@ -18,7 +18,6 @@ class CreateHousesTable extends Migration
             $table->string('name');
             $table->bigInteger('pricePerDay')->nullable();
             $table->string('address')->nullable();
-            $table->string('typeOfRoom')->nullable();
             $table->integer('numberOfBedroom')->nullable();
             $table->integer('numberOfBathroom')->nullable();
             $table->longText('desc')->nullable();

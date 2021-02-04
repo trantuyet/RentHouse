@@ -47,5 +47,5 @@ Route::middleware('auth')->group(function () {
 // Router  house
 Route::prefix('houses')->group(function (){
     Route::get('/', [HouseController::class, 'listHouse'])->name('listHouse');
-    Route::get('{id}/detail', [HouseController::class, 'showDetail'])->name('houses.showDetail');
+    Route::get('/{id}/detail', [HouseController::class, 'showDetail'])->name('houses.showDetail');
 });

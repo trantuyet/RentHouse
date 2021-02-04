@@ -85,7 +85,8 @@ class HouseController extends Controller
     public function showDetail($id)
     {
         $house = House::find($id);
-        return view('house.show-infor', compact('house'));
+        $user = User::find($house->user_id);
+        return view('house.show-infor', compact('house', 'user'));
     }
 
     public function listHouse()
