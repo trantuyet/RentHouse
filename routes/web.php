@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
-Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/register', [AuthController::class, 'showFormRes'])->name('showFormRes');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('redirect', [\App\Http\Controllers\SocialController::class, 'redirect'])->name('redirect');

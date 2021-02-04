@@ -41,7 +41,6 @@
                 <!-- Slider Thumbs -->
                 <div class="property-slider-nav">
                     <div class="item"><img src="images/single-property-01.jpg" alt=""></div>
-
                 </div>
 
             </div>

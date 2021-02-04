@@ -19,7 +19,8 @@ class House extends Model
         "desc",
         "image",
         "user_id",
-        "category_id"
+        "category_id",
+        "status"
     ];
 
 
