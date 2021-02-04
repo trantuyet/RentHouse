@@ -23,11 +23,11 @@ class HouseController extends Controller
     {
         $house = new House();
         $house->fill($request->all());
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $path = $image->store('houses', 'public');
-            $house->image = $path;
-        }
+//        if ($request->hasFile('image')) {
+//            $image = $request->file('image');
+//            $path = $image->store('houses', 'public');
+//            $house->image = $path;
+//        }
         $house->user_id = Auth::id();
         $house->save();
         toastr()->success('Đăng nhà cho thuê thành công!');
