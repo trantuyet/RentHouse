@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HouseImage extends Model
+class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'id',
-        'houseImage',
-        'houseId',
-    ];
+
+
+    public function house()
+    {
+        return $this->belongsTo('\App\Models\House', 'house_id', 'id');
+    }
 }

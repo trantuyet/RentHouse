@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\House;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    function index() {
+    public function index() {
         return view('dashboard');
     }
 }
