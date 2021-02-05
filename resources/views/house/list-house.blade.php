@@ -32,7 +32,7 @@
 
                                 <div class="listing-carousel">
 
-                                    <img>{{$house->image}}
+                                    <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
 
                                 </div>
                             </a>
@@ -60,7 +60,7 @@
                                     @if (!! $user = \App\Models\User::find($house->user_id))
                                         <a href="#"><i class="fa fa-user"></i> {{ $user->name}}</a>
                                     @endif
-                                    <span><i class="fa fa-calendar-o"></i> {{ $house->create_at }}</span>
+                                    <span><i class="fa fa-calendar-o"></i> {{ $house->created_at->toDateString()}}</span>
                                 </div>
                             </div>
                         </div>

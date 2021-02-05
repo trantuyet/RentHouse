@@ -94,12 +94,12 @@
 
                     <!-- Widget -->
                     <div class="widget margin-bottom-30">
-                        <button class="widget-button with-tip" data-tip-content="Print"><i
+                        <button class="widget-button with-tip" data-tip-content="In"><i
                                 class="sl sl-icon-printer"></i>
                         </button>
-                        <button class="widget-button with-tip" data-tip-content="Add to Bookmarks"><i
+                        <button class="widget-button with-tip" data-tip-content="Đánh dấu"><i
                                 class="fa fa-star-o"></i></button>
-                        <button class="widget-button with-tip compare-widget-button" data-tip-content="Add to Compare">
+                        <button class="widget-button with-tip compare-widget-button" data-tip-content="So sánh">
                             <i
                                 class="icon-compare"></i></button>
                         <div class="clearfix"></div>
