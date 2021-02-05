@@ -35,9 +35,10 @@ Route::middleware('auth')->group(function () {
         Route::post('/profile', [UserController::class, 'updateProfile'])->name('profile.update');
 
         Route::prefix('houses')->group(function (){
-            Route::get('/add-house', [HouseController::class, 'index'])->name('me.showAddHouse');
-            Route::post('/add-house', [HouseController::class, 'formAddHouse'])->name('house.addhouse');
             Route::get('/', [UserController::class, 'getListHouseOfUser'])->name('me.getListHouseOfUser');
+            Route::get('/add-house', [HouseController::class, 'formAddHouse'])->name('me.showAddHouse');
+            Route::post('/add-house', [HouseController::class, 'store'])->name('house.addhouse');
+            Route::get('/{id}/delete',[HouseController::class,'destroy'])->name('house.delete');
         });
 
     });
@@ -48,4 +49,5 @@ Route::middleware('auth')->group(function () {
 Route::prefix('houses')->group(function (){
     Route::get('/', [HouseController::class, 'listHouse'])->name('listHouse');
     Route::get('{id}/detail', [HouseController::class, 'showDetail'])->name('houses.showDetail');
+    Route::get('/search',[HouseController::class,'search'])->name('houses.search');
 });

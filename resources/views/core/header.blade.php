@@ -25,7 +25,7 @@
                         <a href="{{route('house.addhouse')}}">Thêm nhà</a>
                     </li>
                     <li>
-                        <a href="#">Pages</a>
+                        <a href="{{route('houses.search')}}">Tìm Kiếm Nhà</a>
                     </li>
                 </ul>
             </nav>

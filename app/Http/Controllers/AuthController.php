@@ -17,7 +17,7 @@ class AuthController extends Controller
         return view('login');
     }
 
-    function login(LoginRequest $request): \Illuminate\Http\RedirectResponse
+    function login(Request $request): \Illuminate\Http\RedirectResponse
     {
         $email = $request->email;
         $password = $request->password;
@@ -27,8 +27,7 @@ class AuthController extends Controller
             'password' => $password
         ];
         if (!Auth::attempt($data)) {
-
-            Session::flash('login_error', 'Account not fount');
+            Session::flash('login_error', 'Tài khoản khôg chính xác!');
             return redirect()->route('login');
         }
         return redirect()->route('home');

@@ -10,7 +10,27 @@ class House extends Model
     use HasFactory;
 
     protected $table = "houses";
+    protected $fillable = [
+        "name",
+        "pricePerDay",
+        "address",
+        "numberOfBedroom",
+        "numberOfBathroom",
+        "desc",
+        "image",
+        "user_id",
+        "category_id",
+        "status"
+    ];
 
+    public function getCategory(){
+        return ($this->category_id == "1") ? 'Chung cư' : 'Nhà Đất';
+    }
+
+    public function getStatus()
+    {
+        return ($this->status == "1") ? 'Cho thuê' : 'Không cho thuê';
+    }
 
     public function user()
     {
@@ -25,5 +45,10 @@ class House extends Model
     public function bills()
     {
         return $this->hasMany('\App\Models\Bill', 'house_id', 'id');
+    }
+
+    public function house(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany('\App\Models\Category', 'category_id', 'id');
     }
 }
