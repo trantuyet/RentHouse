@@ -24,21 +24,17 @@ class ChangePasswordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'current-password'=> "required | min:4",
-            'new-password'=>"required |min:4",
+            'old_password'          => 'required',
+            'new_password'              => 'required|min:6',
+            'password_confirmation'=>'sometimes|required_with:new_password',
         ];
     }
     public function messages(): array
     {
         return [
-            'current-password.required'=>'Mat khau nay khong duoc de trong',
-            'current-password.min'=>'Mat khau khong duoc ngan qua 4 ky tu',
-            'new-password.required'=>'Mat khau nay khong duoc de trong',
-            'new-password.min'=>'Mat kahu nay khong duoc ngan qua 4 ky tu',
-            'new-password-confirm'=>'Mat khau nay khong duoc ngan qua 4 ky tu',
-            'new-password-confirm.required'=>'Mat khau nay khong duoc de trong',
-            'new-password-confirm.min'=>'Mat khau nay khong duoc ngan qua 4 ky tu',
-            'new-password-confirm.confirmed'=>'Mat khau khong khop',
+            'old_password.required'=>'Mật khẩu này không được để trống',
+            'new_password.required'=>'Mật khẩu này không được để trống',
+            'new_password.min'=>'Mật khẩu ít nhất phải 6 ký tự',
         ];
     }
 }

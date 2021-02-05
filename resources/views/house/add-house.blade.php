@@ -3,6 +3,18 @@
     <div id="titlebar" class="submit-page">
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+                    <h2><i class="fa fa-plus-circle"></i> Đăng nhà cho thuê</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="container">
+                    <div class="row">
+
+                        <!-- Submit Page -->
+                        <div class="col-md-12">
+                            <div class="submit-page">
                 <h2><i class="fa fa-plus-circle"></i> Đăng nhà cho thuê</h2>
             </div>
             <!-- Content
@@ -122,15 +134,84 @@
                                         <!-- Row / End -->
                                     </div>
 
+
+
+                            <!-- Rooms -->
+{{--                            <div class="col-md-4">--}}
+{{--                                <h5>Rooms</h5>--}}
+{{--                                <select class="chosen-select-no-single" >--}}
+{{--                                    <option label="blank"></option>--}}
+{{--                                    <option>1</option>--}}
+{{--                                    <option>2</option>--}}
+{{--                                    <option>3</option>--}}
+{{--                                    <option>4</option>--}}
+{{--                                    <option>5</option>--}}
+{{--                                    <option>More than 5</option>--}}
+{{--                                </select>--}}
+{{--                            </div>--}}
+
+{{--                        </div>--}}
+{{--                        <!-- Row / End -->--}}
+
+{{--                    <!-- Section / End -->--}}
+
+
+{{--                    <!-- Section -->--}}
+{{--                                <h3>Gallery</h3>--}}
+{{--                                <!-- Section / End -->--}}
+
+
+{{--                                <!-- Section -->--}}
+{{--                                <h3>Location</h3>--}}
+{{--                                <div class="submit-section">--}}
+
+{{--                                    <!-- Row -->--}}
+{{--                                    <div class="row with-forms">--}}
+
+{{--                                        <!-- Address -->--}}
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <h5>Address</h5>--}}
+{{--                                            <input type="text">--}}
+{{--                                        </div>--}}
+
+{{--                                        <!-- City -->--}}
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <h5>City</h5>--}}
+{{--                                            <input type="text">--}}
+{{--                                        </div>--}}
+
+{{--                                        <!-- City -->--}}
+{{--                                        <div class="col-md-6">--}}
+{{--                                            <h5>State</h5>--}}
+{{--                                            <input type="text">--}}
+{{--                                            --}}{{--                            </div>--}}
+
+{{--                                            --}}{{--                            <!-- Zip-Code -->--}}
+{{--                                            --}}{{--                            <div class="col-md-6">--}}
+{{--                                            --}}{{--                                <h5>Zip-Code</h5>--}}
+{{--                                            --}}{{--                                <input type="text">--}}
+{{--                                            --}}{{--                            </div>--}}
+
+{{--                                            --}}{{--                        </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Địa chỉ</label>--}}
+{{--                                                <label>--}}
+{{--                                                    <input--}}
+{{--                                                        type="text"--}}
+{{--                                                        class="form-control"--}}
+{{--                                                        name="address"--}}
+{{--                                                        value="{{old('address')}}">--}}
+{{--                                                    @error('address')--}}
+{{--                                                    <p class="text-danger">{{$message}}</p>--}}
+{{--                                                    @enderror--}}
+{{--                                                </label>--}}
+
+                                    <!-- Address -->
                                 <h3>Hình ảnh</h3>
                                 <!-- Row -->
                                 <div class="row with-forms">
-
-                                    <!-- Address -->
                                     <div class="col-md-12">
                                         <input name="image" type="file" id="image_thumbnail">
-                                    </div>
-                                    <div class="col-md-12">
                                         <a id="new_image" class="button" style="float: right">Thêm ảnh</a>
                                     </div>
                                 </div>
@@ -139,6 +220,7 @@
                                     <button type="submit" class="button preview margin-top-5">Đăng <i
                                             class="fa fa-arrow-circle-right"></i></button>
                                 </div>
+
                             </form>
                         </div>
                     </div>

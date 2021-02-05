@@ -23,6 +23,14 @@ class House extends Model
         "status"
     ];
 
+    public function getCategorys(){
+        return ($this->category_id == "1") ? 'Chung cư' : 'Nhà Đất';
+    }
+
+    public function getStatus()
+    {
+        return ($this->status == "1") ? 'Cho thuê' : 'Không cho thuê';
+    }
 
     public function user()
     {
@@ -37,5 +45,10 @@ class House extends Model
     public function bills()
     {
         return $this->hasMany('\App\Models\Bill', 'house_id', 'id');
+    }
+
+    public function house(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany('\App\Models\Category', 'category_id', 'id');
     }
 }

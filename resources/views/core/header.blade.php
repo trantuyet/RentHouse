@@ -2,7 +2,7 @@
     <div class="container">
         <div class="left-side">
             <div id="logo">
-                <a href="">
+                <a href="{{route('home')}}">
                     <img src="{{asset('images/logo.png')}}" alt="">
                 </a>
             </div>
@@ -22,7 +22,7 @@
                         <a href="{{route('listHouse')}}">Danh Sách Nhà</a>
                     </li>
                     <li>
-                        <a href="{{route('house.addhouse')}}">Thêm nhà</a>
+                        <a href="{{route('houses.search')}}">Tìm Kiếm Nhà</a>
                     </li>
                 </ul>
             </nav>
@@ -42,7 +42,7 @@
                             <div class="user-name"><span><img src="" alt=""></span>Xin chào, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
                             <ul>
                                 <li><a href="{{ route('me.profile') }}"><i class="sl sl-icon-user"></i> Cập nhật thông tin</a></li>
-                                <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Đã xem</a></li>
+                                <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-star"></i> Đã xem</a></li>
                                 <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-docs"></i> Nhà tôi đã đăng</a></li>
                                 <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Đăng xuât</a></li>
                             </ul>

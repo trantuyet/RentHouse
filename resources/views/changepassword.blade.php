@@ -41,21 +41,21 @@
                         <form action="{{route('updatePassword')}}" method="post">
                             @csrf
                             <label>Current Password</label>
-                            <input id="current-password" name="current-password" value="{{old('current-password')}}"
+                            <input id="current-password" name="old_password" value="{{old('old_password')}}"
                                    class="form-control" type="password">
-                            @error('current-password')
+                            @error('old_password')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
                             <label>New Password</label>
-                            <input id="new-password" name="new-password" value="{{old('new-password')}}"
+                            <input id="new-password" name="new_password" value="{{old('new_password')}}"
                                    class="form-control" type="password">
-                            @error('new-password')
+                            @error('new_password')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
                             <label>Confirm New Password</label>
-                            <input id="new-password-confirm" value="{{old('new-password-confirm')}}"
-                                   name="new-password-confirm" class="form-control" type="password">
-                            @error('new-password-confirm')
+                            <input  value="{{old('password_confirmation')}}"
+                                   name="password_confirmation" class="form-control" type="password">
+                            @error('password_confirmation')
                             <p class="text-danger">{{$message}}</p>
                             @enderror
                             <button class="margin-top-20 button">Save Changes</button>

@@ -83,23 +83,44 @@ class HouseController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id): \Illuminate\Http\Response
     {
-        //
+        $house = House::find($id);
+        $house->images()->delete();
+        $house->delete();
+        Session::flash('delete_success', 'Delete Success!');
+        return back();
     }
 
-//    public function rentHome(Request $request)
-//    {
-//        $userRent = [];
-//        $userRent['id'] = $request->user_id;
-//        $userRent['house_id'] = $request->house_id;
-//        $userRent['checkIn'] = $request->checkIn;
-//        $userRent['checkOut'] = $request->checkOut;
-//
-//        Session::put('userRent', $userRent);
-//        // var_dump(Session::get('userRent'));
-//        return redirect()->route('house.show-infor', $request->house_id);
-//    }
+    public function search(Request $request)
+    {
+        $result = House::query();
+
+        if ($request->keyword){
+            $result = $result->where('address', 'like', '%'.$request->keyword.'%');
+        }
+
+        if ($request->type != 0){
+            $result = $result->where('category_id', '=', $request->type);
+        }
+
+
+        if ($request->min_price) {
+            $result = $result->where('pricePerDay', '>=', $request->min_price);
+        }
+
+        if ($request->max_price) {
+            $result = $result->where('pricePerDay', '<=', $request->max_price);
+        }
+
+        if ($request->tab != 0) {
+            $result = $result->where('status', '=', $request->tab);
+        }
+
+        $houses = $result->get();
+        return view('house.search', compact('houses'));
+    }
+
 
     public function showDetail($id)
     {
@@ -113,5 +134,26 @@ class HouseController extends Controller
         $houses = House::all();
         $users = User::all();
         return view('house.list-house', compact('houses', 'users'));
+    }
+
+    public function showHouse($id)
+    {
+        $house = House::find($id);
+        $categories = Category::all();
+        return view('house.edit-house', compact('house', 'categories'));
+    }
+    public function updateHouse(Request $request)
+    {
+        $id = $request->input('id');
+        $house = House::find($id);
+        $house->fill($request->all());
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = $image->store('images', 'public');
+            $house->image = $path;
+        }
+        $house->save();
+        toastr()->success('Cập nhật thành công!!!');
+        return redirect()->route('me.getListHouseOfUser', $id);
     }
 }

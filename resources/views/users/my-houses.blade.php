@@ -69,7 +69,8 @@
                     @foreach($houses as $house)
                     <tr>
                         <td class="title-container">
-                            <img src="images/listing-02.jpg" alt="">
+                            <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
+
                             <div class="title">
                                 <h4><a href="#">{{ $house->name }}</a></h4>
                                 <span>{{ $house->address }}</span>
@@ -78,9 +79,10 @@
                         </td>
                         <td class="expire-date">{{ $house->created_at }}</td>
                         <td class="action">
-                            <a href="#"><i class="fa fa-pencil"></i> Sửa</a>
-                            <a href="#"><i class="fa  fa-eye-slash"></i> Ẩn </a>
-                            <a href="#" class="delete"><i class="fa fa-remove"></i> Xóa</a>
+
+                            <a href="{{route('me.properties',$house->id)}}"><i class="fa fa-pencil"></i> Sửa</a>
+                            <a href="{{route('house.delete',$house->id )}}" class="delete"><i class="fa fa-remove"></i> Xóa</a>
+
                         </td>
                     </tr>
                     @endforeach
