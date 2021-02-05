@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\House;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
@@ -23,13 +24,27 @@ class HouseController extends Controller
     {
         $house = new House();
         $house->fill($request->all());
-//        if ($request->hasFile('image')) {
-//            $image = $request->file('image');
-//            $path = $image->store('houses', 'public');
-//            $house->image = $path;
-//        }
+        $house->status = StatusConst::LEASE;
         $house->user_id = Auth::id();
+
+        //upload file
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = $image->store('houses', 'public');
+            $house->image = $path;
+        }
+
         $house->save();
+        if ($request->hasFile('image_detail')) {
+            $imageDetail = $request->file('image_detail');
+            foreach ($imageDetail as $img) {
+                $path = $img->store('houses', 'public');
+                $image = new Image();
+                $image->image = $path;
+                $image->house_id = $house->id;
+                $image->save();
+            }
+        }
         toastr()->success('Đăng nhà cho thuê thành công!');
         return redirect()->route('home');
     }
@@ -109,13 +124,14 @@ class HouseController extends Controller
     public function showDetail($id)
     {
         $house = House::find($id);
-        return view('house.show-infor', compact('house'));
+        $user = User::find($house->user_id);
+        return view('house.show-infor', compact('house', 'user'));
     }
 
     public function listHouse()
     {
         $houses = House::all();
-        return view('house.list-house', compact('houses'));
+        $users = User::all();
+        return view('house.list-house', compact('houses', 'users'));
     }
-//, compact('house')
 }

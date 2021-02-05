@@ -33,13 +33,6 @@
         </div>
         <div class="right-side">
 
-
-
-
-
-
-
-
             <div class="header-widget">
                 @if(!\Illuminate\Support\Facades\Auth::check())
                     <a href="{{route('showFormRes')}}" class="sign-in"><i class="fa fa-user"></i> Đăng ký</a>
@@ -49,15 +42,15 @@
 
                         <!-- User Menu -->
                         <div class="user-menu">
-                            <div class="user-name"><span><img src="" alt=""></span>Hi, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
+                            <div class="user-name"><span><img src="" alt=""></span>Xin chào, {{ \Illuminate\Support\Facades\Auth::user()->name }}!</div>
                             <ul>
-                                <li><a href="{{ route('me.profile') }}"><i class="sl sl-icon-user"></i> My Profile</a></li>
-                                <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Bookmarks</a></li>
-                                <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-docs"></i> My Properties</a></li>
-                                <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Log Out</a></li>
+                                <li><a href="{{ route('me.profile') }}"><i class="sl sl-icon-user"></i> Cập nhật thông tin</a></li>
+                                <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Đã xem</a></li>
+                                <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-docs"></i> Nhà tôi đã đăng</a></li>
+                                <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Đăng xuât</a></li>
                             </ul>
                         </div>
-                        <a href="{{ route('me.showAddHouse') }}" class="button border">Submit Property</a>
+                        <a href="{{ route('me.showAddHouse') }}" class="button border">Thêm nhà mới</a>
                     </div>
                 @endif
             </div>

@@ -31,7 +31,7 @@
                 <div class="text-widget">
                     <span>23/TT01, Mon City, Hàm Nghi, Mỹ Đình, Hà Nội</span> <br>
                     Phone: <span>+84 326 279 089</span><br>
-                    E-Mail:<span> <a href="#">maxxin47@gmail.com</a> </span><br>
+                    E-Mail:<span> <a href="#">2021NoLimit@gmail.com</a> </span><br>
                 </div>
             </div>
         </div>

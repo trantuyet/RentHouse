@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>My Profile</h2>
+                    <h2>Nhà tôi đã đăng </h2>
                     <!-- Breadcrumbs -->
                     <nav id="breadcrumbs">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li>My Profile</li>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li>Nhà tôi đã đăng</li>
                         </ul>
                     </nav>
 
@@ -32,7 +32,7 @@
                     <div class="my-account-nav-container">
 
                         <ul class="my-account-nav">
-                            <li class="sub-nav-title">Manage Account</li>
+                            <li class="sub-nav-title">Quản lí tài khoản</li>
                             <li><a href="{{route('me.profile')}}" class="current"><i class="sl sl-icon-user"></i> Thông
                                     tin cá nhân</a></li>
                             <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã được
@@ -40,17 +40,15 @@
                         </ul>
 
                         <ul class="my-account-nav">
-                            <li class="sub-nav-title">Manage Listings</li>
+                            <li class="sub-nav-title">Quản lí danh sách</li>
                             <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> Những ngôi nhà của tôi</a>
                             </li>
-                            <li><a href="submit-property.html"><i class="sl sl-icon-action-redo"></i> Submit New
-                                    Property</a></li>
+                            <li><a href="{{route('me.showAddHouse')}}"><i class="sl sl-icon-action-redo"></i> Thêm nhà mới</a></li>
                         </ul>
 
                         <ul class="my-account-nav">
-                            <li><a href="{{route('changePassword')}}"><i class="sl sl-icon-lock"></i> Change
-                                    Password</a></li>
-                            <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Log Out</a></li>
+                            <li><a href="{{route('changePassword')}}"><i class="sl sl-icon-lock"></i>Đổi mật khẩu </a></li>
+                            <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Đăng xuât</a></li>
                         </ul>
 
                     </div>
@@ -62,8 +60,8 @@
                 <table class="manage-table responsive-table">
 
                     <tr>
-                        <th><i class="fa fa-file-text"></i> Property</th>
-                        <th class="expire-date"><i class="fa fa-calendar"></i> Expiration Date</th>
+                        <th><i class="fa fa-file-text"></i> Nhà đã đăng </th>
+                        <th class="expire-date"><i class="fa fa-calendar"></i>Ngày đăng </th>
                         <th></th>
                     </tr>
 
@@ -75,7 +73,7 @@
                             <div class="title">
                                 <h4><a href="#">{{ $house->name }}</a></h4>
                                 <span>{{ $house->address }}</span>
-                                <span class="table-property-price">{{ $house->pricePerDay }} / ngay</span>
+                                <span class="table-property-price">{{ $house->pricePerDay }} /ngày</span>
                             </div>
                         </td>
                         <td class="expire-date">{{ $house->created_at }}</td>
@@ -83,11 +81,14 @@
                             <a href="#"><i class="fa fa-pencil"></i> Edit</a>
                             <a href="#"><i class="fa  fa-eye-slash"></i> Hide</a>
                             <a href="{{route('house.delete',$house->id )}}" class="delete"><i class="fa fa-remove"></i> Delete</a>
+                            <a href="#"><i class="fa fa-pencil"></i> Sửa</a>
+                            <a href="#"><i class="fa  fa-eye-slash"></i> Ẩn </a>
+                            <a href="#" class="delete"><i class="fa fa-remove"></i> Xóa</a>
                         </td>
                     </tr>
                     @endforeach
                 </table>
-                <a href="submit-property.html" class="margin-top-40 button">Submit New Property</a>
+                <a href="{{route('me.showAddHouse')}}" class="margin-top-40 button">Thêm nhà mới</a>
             </div>
 
         </div>
