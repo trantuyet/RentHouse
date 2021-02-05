@@ -16,7 +16,7 @@
 
                         <!-- Main Search Container -->
                         <div class="main-search-container">
-                            <h2>Find Your Dream Home</h2>
+                            <h2>Tìm ngôi nhà mơ ước của bạn</h2>
 
                             <!-- Main Search -->
                             <form class="main-search-form" method="get" action="{{ route('houses.search') }}">
@@ -114,155 +114,154 @@
 
 {{--                                        </div>--}}
 {{--                                    </div>--}}
-=======
-                                        <input type="text" class="ico-01" id="autocomplete-input"
-                                               placeholder="Enter address e.g. street, city and state or zip" value=""/>
-                                        <button class="button">Search</button>
+{{--                                        <input type="text" class="ico-01" id="autocomplete-input"--}}
+{{--                                               placeholder="Enter address e.g. street, city and state or zip" value=""/>--}}
+{{--                                        <button class="button">Search</button>--}}
                                     </div>
 
                                     <!-- Row -->
-                                    <div class="row with-forms">
+{{--                                    <div class="row with-forms">--}}
 
-                                        <!-- Property Type -->
-                                        <div class="col-md-4">
-                                            <select data-placeholder="Any Type" class="chosen-select-no-single">
-                                                <option>Any Type</option>
-                                                <option>Apartments</option>
-                                                <option>Houses</option>
-                                                <option>Commercial</option>
-                                                <option>Garages</option>
-                                                <option>Lots</option>
-                                            </select>
-                                        </div>
-
-
-                                        <!-- Min Price -->
-                                        <div class="col-md-4">
-
-                                            <!-- Select Input -->
-                                            <div class="select-input">
-                                                <input type="text" placeholder="Min Price" data-unit="USD">
-                                            </div>
-                                            <!-- Select Input / End -->
-
-                                        </div>
+{{--                                        <!-- Property Type -->--}}
+{{--                                        <div class="col-md-4">--}}
+{{--                                            <select data-placeholder="Any Type" class="chosen-select-no-single">--}}
+{{--                                                <option>Any Type</option>--}}
+{{--                                                <option>Apartments</option>--}}
+{{--                                                <option>Houses</option>--}}
+{{--                                                <option>Commercial</option>--}}
+{{--                                                <option>Garages</option>--}}
+{{--                                                <option>Lots</option>--}}
+{{--                                            </select>--}}
+{{--                                        </div>--}}
 
 
-                                        <!-- Max Price -->
-                                        <div class="col-md-4">
+{{--                                        <!-- Min Price -->--}}
+{{--                                        <div class="col-md-4">--}}
 
-                                            <!-- Select Input -->
-                                            <div class="select-input">
-                                                <input type="text" placeholder="Max Price" data-unit="USD">
-                                            </div>
-                                            <!-- Select Input / End -->
+{{--                                            <!-- Select Input -->--}}
+{{--                                            <div class="select-input">--}}
+{{--                                                <input type="text" placeholder="Min Price" data-unit="USD">--}}
+{{--                                            </div>--}}
+{{--                                            <!-- Select Input / End -->--}}
 
-                                        </div>
-
-                                    </div>
-                                    <!-- Row / End -->
+{{--                                        </div>--}}
 
 
-                                    <!-- More Search Options -->
-                                    <a href="#" class="more-search-options-trigger" data-open-title="More Options"
-                                       data-close-title="Less Options"></a>
+{{--                                        <!-- Max Price -->--}}
+{{--                                        <div class="col-md-4">--}}
 
-                                    <div class="more-search-options">
-                                        <div class="more-search-options-container">
+{{--                                            <!-- Select Input -->--}}
+{{--                                            <div class="select-input">--}}
+{{--                                                <input type="text" placeholder="Max Price" data-unit="USD">--}}
+{{--                                            </div>--}}
+{{--                                            <!-- Select Input / End -->--}}
 
-                                            <!-- Row -->
-                                            <div class="row with-forms">
+{{--                                        </div>--}}
 
-                                                <!-- Min Price -->
-                                                <div class="col-md-6">
-
-                                                    <!-- Select Input -->
-                                                    <div class="select-input">
-                                                        <input type="text" placeholder="Min Area" data-unit="Sq Ft">
-                                                    </div>
-                                                    <!-- Select Input / End -->
-
-                                                </div>
-
-                                                <!-- Max Price -->
-                                                <div class="col-md-6">
-
-                                                    <!-- Select Input -->
-                                                    <div class="select-input">
-                                                        <input type="text" placeholder="Max Area" data-unit="Sq Ft">
-                                                    </div>
-                                                    <!-- Select Input / End -->
-
-                                                </div>
-
-                                            </div>
-                                            <!-- Row / End -->
+{{--                                    </div>--}}
+{{--                                    <!-- Row / End -->--}}
 
 
-                                            <!-- Row -->
-                                            <div class="row with-forms">
+{{--                                    <!-- More Search Options -->--}}
+{{--                                    <a href="#" class="more-search-options-trigger" data-open-title="More Options"--}}
+{{--                                       data-close-title="Less Options"></a>--}}
 
-                                                <!-- Min Area -->
-                                                <div class="col-md-6">
-                                                    <select data-placeholder="Beds" class="chosen-select-no-single">
-                                                        <option label="blank"></option>
-                                                        <option>Beds (Any)</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
+{{--                                    <div class="more-search-options">--}}
+{{--                                        <div class="more-search-options-container">--}}
 
-                                                <!-- Max Area -->
-                                                <div class="col-md-6">
-                                                    <select data-placeholder="Baths" class="chosen-select-no-single">
-                                                        <option label="blank"></option>
-                                                        <option>Baths (Any)</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
+{{--                                            <!-- Row -->--}}
+{{--                                            <div class="row with-forms">--}}
 
-                                            </div>
-                                            <!-- Row / End -->
+{{--                                                <!-- Min Price -->--}}
+{{--                                                <div class="col-md-6">--}}
 
+{{--                                                    <!-- Select Input -->--}}
+{{--                                                    <div class="select-input">--}}
+{{--                                                        <input type="text" placeholder="Min Area" data-unit="Sq Ft">--}}
+{{--                                                    </div>--}}
+{{--                                                    <!-- Select Input / End -->--}}
 
-                                            <!-- Checkboxes -->
-                                            <div class="checkboxes in-row">
+{{--                                                </div>--}}
 
-                                                <input id="check-2" type="checkbox" name="check">
-                                                <label for="check-2">Air Conditioning</label>
+{{--                                                <!-- Max Price -->--}}
+{{--                                                <div class="col-md-6">--}}
 
-                                                <input id="check-3" type="checkbox" name="check">
-                                                <label for="check-3">Swimming Pool</label>
+{{--                                                    <!-- Select Input -->--}}
+{{--                                                    <div class="select-input">--}}
+{{--                                                        <input type="text" placeholder="Max Area" data-unit="Sq Ft">--}}
+{{--                                                    </div>--}}
+{{--                                                    <!-- Select Input / End -->--}}
 
-                                                <input id="check-4" type="checkbox" name="check">
-                                                <label for="check-4">Central Heating</label>
+{{--                                                </div>--}}
 
-                                                <input id="check-5" type="checkbox" name="check">
-                                                <label for="check-5">Laundry Room</label>
+{{--                                            </div>--}}
+{{--                                            <!-- Row / End -->--}}
 
 
-                                                <input id="check-6" type="checkbox" name="check">
-                                                <label for="check-6">Gym</label>
+{{--                                            <!-- Row -->--}}
+{{--                                            <div class="row with-forms">--}}
 
-                                                <input id="check-7" type="checkbox" name="check">
-                                                <label for="check-7">Alarm</label>
+{{--                                                <!-- Min Area -->--}}
+{{--                                                <div class="col-md-6">--}}
+{{--                                                    <select data-placeholder="Beds" class="chosen-select-no-single">--}}
+{{--                                                        <option label="blank"></option>--}}
+{{--                                                        <option>Beds (Any)</option>--}}
+{{--                                                        <option>1</option>--}}
+{{--                                                        <option>2</option>--}}
+{{--                                                        <option>3</option>--}}
+{{--                                                        <option>4</option>--}}
+{{--                                                        <option>5</option>--}}
+{{--                                                    </select>--}}
+{{--                                                </div>--}}
 
-                                                <input id="check-8" type="checkbox" name="check">
-                                                <label for="check-8">Window Covering</label>
+{{--                                                <!-- Max Area -->--}}
+{{--                                                <div class="col-md-6">--}}
+{{--                                                    <select data-placeholder="Baths" class="chosen-select-no-single">--}}
+{{--                                                        <option label="blank"></option>--}}
+{{--                                                        <option>Baths (Any)</option>--}}
+{{--                                                        <option>1</option>--}}
+{{--                                                        <option>2</option>--}}
+{{--                                                        <option>3</option>--}}
+{{--                                                        <option>4</option>--}}
+{{--                                                        <option>5</option>--}}
+{{--                                                    </select>--}}
+{{--                                                </div>--}}
 
-                                            </div>
-                                            <!-- Checkboxes / End -->
+{{--                                            </div>--}}
+{{--                                            <!-- Row / End -->--}}
 
-                                        </div>
-                                    </div>
-                                    <!-- More Search Options / End -->
+
+{{--                                            <!-- Checkboxes -->--}}
+{{--                                            <div class="checkboxes in-row">--}}
+
+{{--                                                <input id="check-2" type="checkbox" name="check">--}}
+{{--                                                <label for="check-2">Air Conditioning</label>--}}
+
+{{--                                                <input id="check-3" type="checkbox" name="check">--}}
+{{--                                                <label for="check-3">Swimming Pool</label>--}}
+
+{{--                                                <input id="check-4" type="checkbox" name="check">--}}
+{{--                                                <label for="check-4">Central Heating</label>--}}
+
+{{--                                                <input id="check-5" type="checkbox" name="check">--}}
+{{--                                                <label for="check-5">Laundry Room</label>--}}
+
+
+{{--                                                <input id="check-6" type="checkbox" name="check">--}}
+{{--                                                <label for="check-6">Gym</label>--}}
+
+{{--                                                <input id="check-7" type="checkbox" name="check">--}}
+{{--                                                <label for="check-7">Alarm</label>--}}
+
+{{--                                                <input id="check-8" type="checkbox" name="check">--}}
+{{--                                                <label for="check-8">Window Covering</label>--}}
+
+{{--                                            </div>--}}
+{{--                                            <!-- Checkboxes / End -->--}}
+
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <!-- More Search Options / End -->--}}
 
 
                                 <!-- Box / End -->
@@ -308,7 +307,7 @@
                                     <div class="listing-carousel">
                                         <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
                                         @foreach($house->images as $img)
-                                        <div><img src="{{asset('storage/' . $img->image)}}" alt=""></div>
+                                        <div><img src="{{asset('/' . $img->image)}}" alt=""></div>
                                         @endforeach
                                     </div>
 
@@ -450,8 +449,8 @@
             <div class="col-md-4">
 
                 <!-- Image Box -->
-                <a href="listings-list-with-sidebar.html" class="img-box"
-                   data-background-image="images/popular-location-01.jpg">
+                <a href="http://127.0.0.1:8000/houses/search?_token=RPQaxbFDYy8qgRsHo2CHvvUCH4uMjJnVZycb7rpq&tab=0&keyword=H%C3%A0+N%E1%BB%99i" class="img-box"
+                   data-background-image="images/blog-post-01.jpg">
 
                     <!-- Badge -->
                     <div class="listing-badges">
@@ -459,7 +458,7 @@
                     </div>
 
                     <div class="img-box-content visible">
-                        <h4>New York </h4>
+                        <h4>Hà Nội</h4>
                         <span>14 Properties</span>
                     </div>
                 </a>

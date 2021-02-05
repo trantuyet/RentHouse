@@ -32,7 +32,7 @@
 
                                 <div class="listing-carousel">
 
-                                    <img>{{$house->image}}
+                                    <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
 
                                 </div>
                             </a>
