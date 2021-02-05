@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HouseImage extends Model
+class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'id',
-        'houseImage',
-        'houseId',
-    ];
+    public function houses()
+    {
+        return $this->hasMany(House::class, 'category_id', 'id');
+    }
+
 }
