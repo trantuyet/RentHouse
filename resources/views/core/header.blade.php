@@ -21,9 +21,7 @@
                     <li>
                         <a href="{{route('listHouse')}}">Danh Sách Nhà</a>
                     </li>
-                    <li>
-                        <a href="{{route('house.addhouse')}}">Thêm nhà</a>
-                    </li>
+
                     <li>
                         <a href="{{route('houses.search')}}">Tìm Kiếm Nhà</a>
                     </li>

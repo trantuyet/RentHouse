@@ -78,12 +78,9 @@
                         </td>
                         <td class="expire-date">{{ $house->created_at }}</td>
                         <td class="action">
-                            <a href="#"><i class="fa fa-pencil"></i> Edit</a>
-                            <a href="#"><i class="fa  fa-eye-slash"></i> Hide</a>
-                            <a href="{{route('house.delete',$house->id )}}" class="delete"><i class="fa fa-remove"></i> Delete</a>
+                            <a href="{{route('house.delete',$house->id )}}" class="delete"><i class="fa fa-remove"></i> Xóa</a>
                             <a href="#"><i class="fa fa-pencil"></i> Sửa</a>
                             <a href="#"><i class="fa  fa-eye-slash"></i> Ẩn </a>
-                            <a href="#" class="delete"><i class="fa fa-remove"></i> Xóa</a>
                         </td>
                     </tr>
                     @endforeach
