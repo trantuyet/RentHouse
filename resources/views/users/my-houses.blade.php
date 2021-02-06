@@ -12,7 +12,6 @@
                             <li>Nhà tôi đã đăng</li>
                         </ul>
                     </nav>
-
                 </div>
             </div>
         </div>
@@ -35,24 +34,21 @@
                             <li class="sub-nav-title">Quản lí tài khoản</li>
                             <li><a href="{{route('me.profile')}}" class="current"><i class="sl sl-icon-user"></i> Thông
                                     tin cá nhân</a></li>
-                            <li><a href="my-bookmarks.html"><i class="sl sl-icon-star"></i> Danh sách nhà đã được
+                            <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-star"></i> Danh sách nhà đã được
                                     thuê</a></li>
                         </ul>
 
                         <ul class="my-account-nav">
                             <li class="sub-nav-title">Quản lí danh sách</li>
-                            <li><a href="my-properties.html"><i class="sl sl-icon-docs"></i> Những ngôi nhà của tôi</a>
+                            <li><a href="{{ route('me.getListHouseOfUser') }}"><i class="sl sl-icon-docs"></i> Những ngôi nhà của tôi</a>
                             </li>
                             <li><a href="{{route('me.showAddHouse')}}"><i class="sl sl-icon-action-redo"></i> Thêm nhà mới</a></li>
                         </ul>
-
                         <ul class="my-account-nav">
                             <li><a href="{{route('changePassword')}}"><i class="sl sl-icon-lock"></i>Đổi mật khẩu </a></li>
                             <li><a href="{{ route('logout') }}"><i class="sl sl-icon-power"></i> Đăng xuât</a></li>
                         </ul>
-
                     </div>
-
                 </div>
             </div>
 
@@ -72,7 +68,7 @@
                             <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
 
                             <div class="title">
-                                <h4><a href="#">{{ $house->name }}</a></h4>
+                                <h4><a href="{{route('houses.showDetail', $house->id)}}">{{ $house->name }}</a></h4>
                                 <span>{{ $house->address }}</span>
                                 <span class="table-property-price">{{ $house->pricePerDay }} /ngày</span>
                             </div>
@@ -82,16 +78,13 @@
 
                             <a href="{{route('me.properties',$house->id)}}"><i class="fa fa-pencil"></i> Sửa</a>
                             <a href="{{route('house.delete',$house->id )}}" class="delete"><i class="fa fa-remove"></i> Xóa</a>
-
                         </td>
                     </tr>
                     @endforeach
                 </table>
                 <a href="{{route('me.showAddHouse')}}" class="margin-top-40 button">Thêm nhà mới</a>
             </div>
-
         </div>
     </div>
-
 @endsection
 

@@ -58,7 +58,6 @@
                     <!-- Listing Item -->
                         <div class="carousel-item">
                             <div class="listing-item">
-
                                 <a href="{{route('houses.showDetail', $house->id)}}" class="listing-img-container">
                                     <div class="listing-img-content">
                                         <span
@@ -66,7 +65,6 @@
                                         <span class="like-icon with-tip" data-tip-content="Đánh dấu"></span>
                                         <span class="compare-button with-tip" data-tip-content="So sánh"></span>
                                     </div>
-
                                     <div class="listing-carousel">
                                         <div><img
                                                 src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}"

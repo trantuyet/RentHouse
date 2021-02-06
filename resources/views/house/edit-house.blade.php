@@ -1,75 +1,128 @@
 @extends('master')
 @section('content')
-    <!-- Content
-    ================================================== -->
-    <div class="container">
-        <div class="row fullwidth-layout">
-            <div class="col-md-12">
-                <!-- Listings -->
-                <div class="listings-container list-layout">
-                @foreach($houses as $house)
-                    <!-- Listing Item -->
-                        <div class="listing-item">
-                            <a href="" class="listing-img-container">
-                                <div class="listing-badges">
-                                    <span> @if($house->category_id ==2) Nhà ở </span>
-                                    <span>@else Chung cư </span>
-                                    @endif
+    <div id="titlebar" class="submit-page">
+        <div class="container">
+            <!-- Content
+            ================================================== -->
+            <div class="container">
+                <div class="row">
+                    <!-- Submit Page -->
+                    <div class="col-md-12">
+                        <div class="submit-page">
+                            <form action="{{ route('properties.update') }}" method="post">
+                            @csrf
+                            <!-- Section -->
+                                <h3> Sửa </h3>
+                                <div class="submit-section">
+                                    <input type="hidden" name="id" value="{{$house->id}}">
+                                    <!-- Title -->
+                                    <div class="form">
+                                        <h5>Tên nhà <i class="tip"
+                                                       data-tip-content="Tên bài đăng thể hiện khái quát ngôi nhà của bạn"></i>
+                                        </h5>
+                                        <input class="search-field" name="name" type="text" value="{{$house->name}}"/>
+                                    </div>
+                                    <!-- Row -->
+                                    <div class="row with-forms">
+                                        <!-- Status -->
+                                        <div class="col-md-6">
+                                            <h5>Trạng thái thuê</h5>
+                                            <select name="status" class="chosen-select-no-single">
+                                                <option value="{{ \App\Http\Controllers\StatusConst::LEASE }}">Cho
+                                                    thuê
+                                                </option>
+                                                <option value="{{ \App\Http\Controllers\StatusConst::UN_LEASE }}">
+                                                    Không
+                                                    cho thuê
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <!-- Type -->
+                                        <div class="col-md-6">
+                                            <h5>Loại nhà</h5>
+                                            <select name="category_id" class="chosen-select-no-single">
+                                                @foreach($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Row / End -->
+                                    <!-- Row -->
+                                    <div class="row with-forms">
+                                        <!-- Price -->
+                                        <div class="col-md-4">
+                                            <h5>Giá thuê/ngày <i class="tip"
+                                                                 data-tip-content="Hãy đưa ra một mức giá hợp lí, sau đó có thể thỏa thuận lại với người thuê sau"></i>
+                                            </h5>
+                                            <div class="select-input disabled-first-option">
+                                                <input name="pricePerDay" type="text" data-unit="VNĐ" value="{{$house->pricePerDay}}">
+                                            </div>
+                                        </div>
+                                        <!-- Area -->
+                                        <div class="col-md-4">
+                                            <h5>Số phòng ngủ</h5>
+                                            <select name="numberOfBedroom" class="chosen-select-no-single">
+                                                <option>{{$house->numberOfBedroom}}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <!-- Rooms -->
+                                        <div class="col-md-4">
+                                            <h5>Số phòng tắm</h5>
+                                            <select name="numberOfBathroom" class="chosen-select-no-single">
+                                                <option>{{$house->numberOfBathroom}}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Row / End -->
                                 </div>
-                                <div class="listing-img-content">
-                                    <span
-                                        class="listing-price">{{number_format($house->pricePerDay,0,",",".")}}<i> VNĐ </i></span>
-                                    <span class="like-icon with-tip" data-tip-content="Đánh dấu"></span>
-                                    <span class="compare-button with-tip" data-tip-content="So sánh"></span>
+                                <!-- Section / End -->
+                                <!-- Section -->
+                                <h3>Vị trí</h3>
+                                <!-- Row -->
+                                <div class="row with-forms">
+                                    <!-- Address -->
+                                    <div class="col-md-12">
+                                        <h5>Địa chỉ</h5>
+                                        <input name="address" type="text">
+                                    </div>
                                 </div>
-                                <div class="listing-carousel">
-                                    <div><img src=" {{ ($house->image) ? asset('storage/' . $house->image) : asset('images/blog-post-01.jpg')}}" alt=""></div>
+                                <div class="form-group">
+                                    <label>Mô tả chung </label>
+                                    <label for=""></label>
+                                    <textarea class="form-control" name="desc" cols="30" rows="10">{{$house->desc}}</textarea>
+                                    <!-- Row / End -->
                                 </div>
-                            </a>
-                            <div class="listing-content">
-                                <div class="listing-title">
-                                    <h4><a href="{{route('houses.showDetail', $house->id)}}">{{$house->name   }}</a>
-                                    </h4>
-                                    <a href=""
-                                       class="listing-address ">
-                                        <i class="fa fa-map-marker"></i>
-                                        {{$house->address}}
-                                    </a>
-                                    <a href="{{route('houses.showDetail', $house->id)}}" class="details button border">Xem
-                                        chi tiết</a>
+                                <h3>Hình ảnh</h3>
+                                <!-- Row -->
+                                <div class="row with-forms">
+                                    <!-- Address -->
+                                    <div class="col-md-12">
+                                        <input name="image" type="file" id="image_thumbnail" value="{{$house->image}}">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <a id="new_image" class="button" style="float: right">Thêm ảnh</a>
+                                    </div>
                                 </div>
-                                <ul class="listing-details">
-                                    <li> {{ $house->numberOfBedroom }} Phòng ngủ</li>
-                                    <li> {{ $house->numberOfBathroom }} Phòng tắm</li>
-                                </ul>
-                                <div class="listing-footer">
-                                    @if (!! $user = \App\Models\User::find($house->user_id))
-                                        <a href="#"><i class="fa fa-user"></i> {{ $user->name}}</a>
-                                    @endif
-                                    <span><i class="fa fa-calendar-o"></i> {{ $house->created_at->toDateString()}}</span>
+                                <div class="submit-section">
+                                    <!-- Section / End -->
+                                    <button type="submit" class="button preview margin-top-5">Sửa<i
+                                            class="fa fa-arrow-circle-right"></i></button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
-                @endforeach
-                <!-- Listing Item / End -->
+                    </div>
                 </div>
-                <!-- Listings Container / End -->
-                <div class="clearfix"></div>
-                <!-- Pagination -->
-                <div class="pagination-container margin-top-20">
-                    <nav class="pagination">
-                        <ul>
-                            <li><a href="#" class="current-page">1</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="pagination-next-prev">
-                        <ul>
-                            <li><a href="#" class="prev">Trang trước</a></li>
-                            <li><a href="#" class="next">Trang tiếp theo</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Pagination / End -->
             </div>
         </div>
     </div>
