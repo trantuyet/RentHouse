@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class House extends Model
 {
@@ -47,8 +48,9 @@ class House extends Model
         return $this->hasMany('\App\Models\Bill', 'house_id', 'id');
     }
 
-    public function house(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function categories(): BelongsTo
     {
-        return $this->hasMany('\App\Models\Category', 'category_id', 'id');
+        return $this->belongsTo(Category::class);
     }
+
 }

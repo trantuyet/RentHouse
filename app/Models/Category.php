@@ -9,6 +9,9 @@ class Category extends Model
 {
     use HasFactory;
 
-
+    public function houses()
+    {
+        return $this->hasMany(House::class, 'category_id', 'id');
+    }
 
 }
