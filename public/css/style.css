@@ -1,89 +1,8 @@
 @charset "UTF-8";
-
-/*
-* Author: Vasterad
-* URL: http://purethemes.net
-*/
-
-/* ------------------------------------------------------------------- */
-/* Table of Contents
-----------------------------------------------------------------------
-
-	01. Import Section ...................... Imported variables.
-
-	02. Layout Components ................... Generic layout elements.
-		# Topbar
-		# Header
-		# Sticky Header
-		# Back to top
-		# Navigation
-		# mmenu.js - Mobile Menu
-		# Search Forms Styling
-		# Full Width Search Form
-		# Parallax Background
-		# Titlebar
-		# Agents List
-		# Listings Styles
-		# Fullwidth Sections
-		# Pagination
-		# Property Page
-		# Submit page
-		# Compare Properties
-		# My Account Page
-		# Image Hovers
-		# Contact Form
-		# Blog Styles
-
-	03. Script Styles ....................... jQuery add-ons CSS.
-		# Google Maps
-		# Owl Carousel
-		# Slick Carousel
-		# Magnific Popup
-		# Dropzone
-		# Chosen Plugin
-		# Input with dropdown
-
-	04. Shortcodes .......................... Template elements.
-		# Buttons
-		# Pricing Tables
-		# Accordion / Toggles
-		# Tabs
-		# Tables
-		# Notification Boxes
-		# Social Icons
-		# Info Box
-		# Testimonials
-		# Icon Boxes
-		# Info Banner
-		# Counters
-
-	05. Others .............................. CSS helper classes etc.
-		# Common Styles
-		# Login Register
-		# Offsets
-
-	06. Media Queries ....................... Mobile style sheets.
-
-*/
-
-
-/* ------------------------------------------------------------------- */
-/* 01. Import Section
----------------------------------------------------------------------- */
 @import url("bootstrap.css");					/* Default Reset, Typography, Forms, Responsive Grid etc. */
 @import url("icons.css");						/* Webfont Icons: FontAwesome, Line, Simple Line */
 @import url("http://fonts.googleapis.com/css?family=Varela+Round");
 
-
-/* ------------------------------------------------------------------- */
-/*  02. Layout Components
----------------------------------------------------------------------- */
-
-/* ---------------------------------- */
-/* Topbar
-------------------------------------- */
-
-/* Common Styles */
 #top-bar {
 	background-color: #66676b;
 	color: #fff;

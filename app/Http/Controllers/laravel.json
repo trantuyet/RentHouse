@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "rent-house-unlimited",
+  "private_key_id": "b0f09d2f4a6164b6b76a8abbb91eb32949342a7d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCouC8qUa4ZYkVD\nk7M42OJi/u49tIfyYpSjM1/f6Q1QRdTGhIpo9i6x9tA0dJkSfIUNK/AZBGa7Kaxc\n7eDIAsWWzxzikPmlS8dVf9VGcrNIXVkVlEGGVrylgOkWbAR10ZopOP2u9LRib1ny\nCE23W28hpPDRdxfZd0QEfZLusXzIj3ccTUppqFx1Drxu7KMieIQqB6wMnxyZ8DCa\nB00zsdl3jucJInuR8iREMB9lUBDrSwus4ul6kOhkzI0CVjq5wzhKJXAAOMuVoGe0\npRgRQ13aorf/WWvKblm9YQzOhtu/wAtiPCZwUKzdY+t2U0bMqpDSQyeoPzGRi7rA\nvkFPnb7hAgMBAAECggEARaWehrQoD79ywzYd5ioVrfL5isxS0DpkjEghXC96uPfS\noU5GSpTRatJtWTIGnEx9qhXIq7MW600FI2lpAHewdBQ0Iszg2RzCgOdftZCUtJsg\nMpm8QMXeYt2nmoNlhfNL1Zd6lTXbnsTDlvdZiYa7heJuLLGiTTmAAPCLbnAjCDEQ\nOMFJhmRw4Ohpb3HLlW3dNWeXadMUl339eBTlMeQ0i9wVvqgzS0FRyFfkcT6d1+j8\nRB9lvu18/muyoXbRh2yomag7YOlLQjtey72+JZjy54ZZwM9iJ64uIlNfbeeFq7g3\nRmElCC27IRbzwgqWlC0GHSNufEtKrHUGtFYx46AjNwKBgQDolr2i/O21gWVgiUZK\ni2ITH4VXjDaYPWFCUb9SjhNGMGhO+Tcq0nJzvRSjjqUm8VbcjiAE0bDqf9EBGmhe\ngTGgXhcYhRrRSDx62zC6o4yspd8r5GkSRQw/ODBPJ+pPwQosDHrr0ZNfEY1GxYiM\nxvEqQTWIqTwTo/C6R7qKWFVflwKBgQC5s66y1ceqY2Frh+Z780YqYVrvCJTuYGd2\nTIkz/QcSpUtSlaM4JmyA5nnQpGpNNjgHuc1HoJaPzRoBrXbRs2q3ME68OrF1INkY\n4hkwGBlCv3YgFPdyczKJRG1p124hpoc/5EwjUxKu5laLBKz9JzioTrIEFGLH24Zo\nz2G+ZVkkRwKBgAUwR665Ibxo1JAgv9at4VQ34cugLx+aTu8hz7jRvpBUSB9q49Yq\nt67pSuqTJhAGVj+5U/GHlADHNSxnIGjrTOYc8zryzTRZ/i9ncGDZgSvgz2e1QrrL\nm4hVgo5hf5Kj5cwxwxQ7qqP2SkaH5ZHuZjbhGYag79woThh5vSmU6uKlAoGBAKCw\nsS0i/CGe2X/5GyKKwl6N2+gXnvgfB6hAVkFcZDBoRCN0RMajySRJS4OVoj6p+hYF\nW3LtrRtGOYjWF4kiHefir18F0uUtxW5Yx77sO3+cuZTNT8oDkOljAuKhfjU0KrjI\nznGKwxIBU0X8h8yPkeFiJ3yMP2X9ufMb8NKWVGqlAoGBAOh3IUyTQGgwfYfzOzW0\n1KILeaeszo8tUy5Ss7ZKM/Xj+2+PcXCPXV7/xwc4ECpcmF8Ak42fysbo9z0/ouAb\n7sYD1RFtDOQvjgoVrS3417DFZTqOjePFag5E+2wb0gEnUnnZMYM9XVWA+KGlN9gW\n3dqBeagLxIrxPRsVvg0os6M9\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-l5qdy@rent-house-unlimited.iam.gserviceaccount.com",
+  "client_id": "112581175881276915896",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-l5qdy%40rent-house-unlimited.iam.gserviceaccount.com"
+}

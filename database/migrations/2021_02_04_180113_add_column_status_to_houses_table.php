@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHouseImageTable extends Migration
+class AddColumnStatusToHousesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateHouseImageTable extends Migration
      */
     public function up()
     {
-        Schema::create('house_image', function (Blueprint $table) {
-            $table->id();
-            $table->string('image');
-            $table->timestamps();
+        Schema::table('houses', function (Blueprint $table) {
+            $table->string('status')->default(\App\Http\Controllers\StatusConst::LEASE);
         });
     }
 
@@ -27,6 +25,8 @@ class CreateHouseImageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('house_image');
+        Schema::table('houses', function (Blueprint $table) {
+            //
+        });
     }
 }
